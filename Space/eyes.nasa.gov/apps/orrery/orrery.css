@@ -1,0 +1,3576 @@
+#pioneer {
+    width: 100%
+}
+
+#pioneer,
+.ui {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%
+}
+
+.ui {
+    width: 100vw;
+    pointer-events: none
+}
+
+#title {
+    height: 64px;
+    color: var(--fg1);
+    font-size: 2.2em;
+    text-align: center;
+    margin: 16px;
+    font-family: var(--font2);
+    z-index: 5
+}
+
+#bottom-panel {
+    bottom: 0
+}
+
+#bottom-panel,
+#top-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: auto;
+    width: 100%
+}
+
+#top-panel {
+    top: 0
+}
+
+#details-panel {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 32vw;
+    min-width: 370px;
+    max-width: calc(4vw + 370px);
+    pointer-events: none;
+    z-index: 5
+}
+
+#details-panel.mini {
+    z-index: 5
+}
+
+#details-panel .container {
+    z-index: 25
+}
+
+#details-panel .details-toggle {
+    z-index: 50
+}
+
+#powered {
+    bottom: 1vw;
+    left: calc(1vw + 5px);
+    pointer-events: none
+}
+
+#nasa-logo,
+#powered {
+    position: fixed;
+    z-index: 5
+}
+
+#nasa-logo {
+    top: 1vw;
+    left: 1vw
+}
+
+#options {
+    top: 1vw;
+    z-index: 10
+}
+
+#controls-bar,
+#options {
+    position: fixed;
+    right: 1vw
+}
+
+#controls-bar {
+    bottom: 1vw;
+    z-index: 5
+}
+
+#navigation-bar {
+    bottom: 1vw;
+    z-index: 10
+}
+
+#clock,
+#navigation-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%)
+}
+
+#clock {
+    margin: 0 auto;
+    top: 1vw;
+    pointer-events: none
+}
+
+#message-bar {
+    width: 75%;
+    position: absolute;
+    top: calc(1vw + 3.5em);
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    z-index: 10
+}
+
+#message-bar .container {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center
+}
+
+#search-bar {
+    position: absolute;
+    left: 50%;
+    bottom: calc(1vw + 3.75em);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: 15
+}
+
+#info-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: var(--bgmobile);
+    pointer-events: all;
+    z-index: 500;
+    overflow: auto;
+    margin: 0 auto;
+    z-index: 100
+}
+
+@media only screen and (max-width:64em) {
+    body {
+        font-size: 14px
+    }
+    #title {
+        font-size: 1.4em
+    }
+    #bottom-panel {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bgmobile);
+        height: 50px
+    }
+    #powered {
+        display: none
+    }
+    #nasa-logo {
+        transform: scale(.85);
+        -webkit-transform: scale(.85)
+    }
+    #search-bar {
+        width: auto;
+        max-width: auto;
+        transform: none;
+        -webkit-transform: none;
+        display: inline-block;
+        vertical-align: middle
+    }
+    #details-panel,
+    #search-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0
+    }
+    #details-panel {
+        top: 0;
+        width: 100vw;
+        max-width: 100%;
+        min-width: 100%
+    }
+    #controls-bar {
+        bottom: 0;
+        right: 0
+    }
+    #message-bar {
+        width: 100%;
+        background: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .75) 15%, rgba(0, 0, 0, .75) 50%, rgba(0, 0, 0, .75) 85%, transparent)
+    }
+    #message-bar .container {
+        width: 90%
+    }
+}
+
+@media only screen and (max-height:48em) {
+    body {
+        font-size: 14px
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    body {
+        font-size: 12px
+    }
+    #powered {
+        bottom: 0;
+        left: 5px
+    }
+    #nasa-logo {
+        top: 5px;
+        left: 5px
+    }
+    #message-bar {
+        top: calc(1vw + 2em)
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    body {
+        font-size: 20px;
+        line-height: 2em
+    }
+    #message-bar {
+        top: calc(1vw + 4em)
+    }
+    #details-panel {
+        max-width: calc(4vw + 500px)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    body {
+        font-size: 28px;
+        line-height: 2em
+    }
+    #details-panel {
+        max-width: calc(4vw + 700px)
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes blackFadeOut {
+    0% {
+        opacity: 1;
+        background: #000
+    }
+    to {
+        opacity: 0;
+        background: #000
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes blackFadeOut {
+    0% {
+        opacity: 1;
+        background: #000
+    }
+    to {
+        opacity: 0;
+        background: #000
+    }
+}
+
+:root {
+    --bg: transparent;
+    --bg1: rgba(0, 0, 0, 0.6);
+    --bg2: rgba(0, 0, 0, 0.35);
+    --bgmobile: rgba(0, 0, 0, 0.85);
+    --bgselection: rgba(25, 121, 167, 0.7);
+    --bgbanner: rgba(40, 40, 40, 0.95);
+    --borderColor: hsla(0, 0%, 100%, 0.2);
+    --fg: hsla(0, 0%, 100%, 0.4);
+    --fg1: #fff;
+    --fg2: hsla(0, 0%, 100%, 0.75);
+    --fg3: hsla(0, 0%, 100%, 0.5);
+    --separator: hsla(0, 0%, 100%, 0.35);
+    --font1: "Metropolis", Helvetica, Arial, sans-serif;
+    --font2: "Exo", Helvetica, Arial, sans-serif;
+    --font3: "CooperHewitt", Helvetica, Arial, sans-serif;
+    --solarSystemFg: #ffd900;
+    --sunFg: #ff6f00;
+    --mercuryFg: #7973dc;
+    --venusFg: #d67a19;
+    --earthFg: #5592c6;
+    --marsFg: #3adede;
+    --jupiterFg: #e96a76;
+    --saturnFg: #eba357;
+    --uranusFg: #89ebff;
+    --neptuneFg: #b7d0ff;
+    --plutoFg: #ff9469;
+    --otherFg: #7dbbe2
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    overscroll-behavior: none;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none
+}
+
+input:focus,
+textarea:focus {
+    outline: none
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent
+}
+
+body,
+button,
+input {
+    margin: 0;
+    font-family: var(--font1);
+    color: #fff
+}
+
+a,
+button {
+    opacity: .75;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent
+}
+
+.touch a.secondary:hover,
+.touch button.secondary:hover,
+a.secondary,
+button.secondary {
+    opacity: .4
+}
+
+a:hover,
+button:hover {
+    opacity: 1
+}
+
+.touch button:disabled,
+.touch button:disabled:hover,
+button:disabled,
+button:disabled:hover {
+    opacity: .25;
+    cursor: auto
+}
+
+.touch a:hover,
+.touch button:hover {
+    opacity: .75
+}
+
+h1 {
+    font-size: 2em;
+    font-family: var(--font2)
+}
+
+h1,
+h2 {
+    color: var(--fg1);
+    margin: 0;
+    font-weight: 400
+}
+
+h2 {
+    font-size: 1.4em;
+    font-family: var(--font3)
+}
+
+p {
+    margin: 4px 0;
+    color: var(--fg1)
+}
+
+.content p {
+    line-height: 1.4em
+}
+
+a {
+    color: var(--fg1)
+}
+
+.asteroid .color,
+.comet .color,
+.dwarf-planet .color,
+.moon .color,
+.spacecraft .color {
+    color: var(--otherFg)
+}
+
+.inner-solar-system .color,
+.outer-solar-system .color {
+    color: var(--solarSystemFg)
+}
+
+.sun .color {
+    color: var(--sunFg)
+}
+
+.mercury .color {
+    color: var(--mercuryFg)
+}
+
+.venus .color {
+    color: var(--venusFg)
+}
+
+.earth .color {
+    color: var(--earthFg)
+}
+
+.mars .color {
+    color: var(--marsFg)
+}
+
+.jupiter .color {
+    color: var(--jupiterFg)
+}
+
+.saturn .color {
+    color: var(--saturnFg)
+}
+
+.uranus .color {
+    color: var(--uranusFg)
+}
+
+.neptune .color {
+    color: var(--neptuneFg)
+}
+
+.pluto .color {
+    color: var(--plutoFg)
+}
+
+#left-viewport .pioneer-label-div,
+#right-viewport .pioneer-label-div {
+    pointer-events: none
+}
+
+#left-viewport {
+    border-right: 1px solid var(--separator)
+}
+
+#powered p {
+    color: var(--fg1);
+    opacity: .25;
+    font-family: var(--font1);
+    font-size: .85em;
+    padding: 0;
+    margin: 0
+}
+
+#powered em {
+    font-style: normal;
+    font-size: 1.2em
+}
+
+#nasa-logo {
+    background: transparent url(84a1871690a66ac8963708ef73648fc2.svg) no-repeat -65px 0;
+    width: 45px;
+    height: 45px;
+    display: block;
+    opacity: .35
+}
+
+#time-slider {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: calc(50% - 3.5em);
+    height: 1.25em;
+    margin: .25em;
+    text-align: center;
+    pointer-events: auto;
+    overflow: hidden;
+    transform: translateX(-50%)
+}
+
+#time-slider #handle {
+    border: 1px solid var(--fg);
+    border-radius: .25em;
+    background: var(--bg)
+}
+
+@media only screen and (max-width:64em) {
+    #time-slider {
+        position: absolute;
+        top: 70px;
+        width: calc(90% - 3.5em)
+    }
+    #left-viewport {
+        border-bottom: 1px solid var(--separator);
+        border-right: 0
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #left-viewport {
+        border-right: 1px solid var(--separator);
+        border-bottom: 0
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #nasa-logo {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform-origin: left top
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #nasa-logo {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform-origin: left top
+    }
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 400;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/Metropolis-Regular.otf)
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 500;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/Metropolis-Medium.otf)
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 600;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/Metropolis-SemiBold.otf)
+}
+
+@font-face {
+    font-family: Metropolis;
+    font-weight: 700;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/Metropolis-Bold.otf)
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-weight: 400;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/CooperHewitt-Medium.otf)
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-weight: 500;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/CooperHewitt-Semibold.otf)
+}
+
+@font-face {
+    font-family: CooperHewitt;
+    font-weight: 700;
+    src: url(https://solarsystem.nasa.gov/assets/vendor/fonts/CooperHewitt-Bold.otf)
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: 200;
+    src: url(92c908b3e09686377d1da0dc0fb108be.otf)
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: 300;
+    src: url(cb4b9635a225d460005685eff73dd1da.otf)
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: 400;
+    src: url(2e458d0551b5c6e6721047b1b663e0e2.otf)
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: 500;
+    src: url(326952ede2abdc3f82aa870ef3cd14f1.otf)
+}
+
+@font-face {
+    font-family: Exo;
+    font-weight: 700;
+    src: url(e9443475508a6199b2d542dfb6c4599b.otf)
+}
+
+.pioneer-label-div {
+    --fontSize: 1.05em;
+    --fontColor: #fff;
+    --iconFadeIn: 0.5;
+    --iconFadeOut: 0.1;
+    --iconHover: 0.75;
+    --textFadeIn: 0.75;
+    --textFadeOut: 0.05;
+    --textHover: 1.0;
+    --smallTextFadeIn: 0.45;
+    --smallTextFadeOut: 0.05;
+    --selectionScale: 1.0;
+    font-size: var(--fontSize);
+    font-family: var(--font1);
+    font-weight: 400;
+    padding-left: 1.1em;
+    white-space: nowrap;
+    color: var(--fontColor)
+}
+
+.pioneer-label-div.active {
+    pointer-events: all
+}
+
+.pioneer-label-div.active .icon,
+.pioneer-label-div.active .text {
+    animation-duration: .25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both
+}
+
+.pioneer-label-div.active .text {
+    animation-name: textFadeIn;
+    -webkit-animation-name: textFadeIn
+}
+
+.pioneer-label-div.active .icon {
+    animation-name: iconFadeIn;
+    -webkit-animation-name: iconFadeIn
+}
+
+.pioneer-label-div.hidden {
+    pointer-events: none
+}
+
+.pioneer-label-div.hidden .icon,
+.pioneer-label-div.hidden .text {
+    animation-duration: .75s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .75s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both
+}
+
+.pioneer-label-div.hidden .text {
+    animation-name: textFadeOut;
+    -webkit-animation-name: textFadeOut
+}
+
+.pioneer-label-div.hidden .icon {
+    animation-name: iconFadeOut;
+    -webkit-animation-name: iconFadeOut
+}
+
+@keyframes textFadeOut {
+    0% {
+        opacity: var(--textFadeIn)
+    }
+    to {
+        opacity: var(--textFadeOut)
+    }
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: var(--textFadeOut)
+    }
+    to {
+        opacity: var(--textFadeIn)
+    }
+}
+
+@keyframes iconFadeOut {
+    0% {
+        opacity: var(--iconFadeIn)
+    }
+    to {
+        opacity: var(--iconFadeOut)
+    }
+}
+
+@keyframes iconFadeIn {
+    0% {
+        opacity: var(--iconFadeOut)
+    }
+    to {
+        opacity: var(--iconFadeIn)
+    }
+}
+
+@-webkit-keyframes textFadeOut {
+    0% {
+        opacity: var(--textFadeIn)
+    }
+    to {
+        opacity: var(--textFadeOut)
+    }
+}
+
+@-webkit-keyframes textFadeIn {
+    0% {
+        opacity: var(--textFadeOut)
+    }
+    to {
+        opacity: var(--textFadeIn)
+    }
+}
+
+@-webkit-keyframes iconFadeOut {
+    0% {
+        opacity: var(--iconFadeIn)
+    }
+    to {
+        opacity: var(--iconFadeOut)
+    }
+}
+
+@-webkit-keyframes iconFadeIn {
+    0% {
+        opacity: var(--iconFadeOut)
+    }
+    to {
+        opacity: var(--iconFadeIn)
+    }
+}
+
+.pioneer-label-div .icon {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -10px;
+    opacity: .25;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMjIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04ODUuMSAtMTI5MC45Nikgc2NhbGUoMy43Nzk1KSI+PHBhdGggZD0iTTIzNy4zOTIgMzQ1LjM1NWMtLjM2LjUtLjUyOCAxLjEwNi0uNDc5IDEuNzE2LjAwMy4wMjQuMDEuMDc4LjAxNy4xMmwuMDE0LjA3Ni4xNTktLjAyMWEuNTYuNTYgMCAwIDEgLjE3My0uMDEyLjU4Ny41ODcgMCAwIDEgLjA1LjE1IDIuMDY3IDIuMDY3IDAgMCAwIDEuMTYzIDEuNDA1Yy4xOTcuMDkuNDk2LjE2NS42OTQuMTc0LjEyOC4wMDYuMTE2LS4wMDQtLjAzOC0uMDMxYTIuMTAxIDIuMTAxIDAgMCAxLTEuNjctMS40NSAyLjUxNyAyLjUxNyAwIDAgMS0uMDk0LS41NzVjLS4wMDUtLjQ1MS4xMTctLjg2Mi4zNjMtMS4yMjYuMjk2LS40MzcuNzYtLjc1OCAxLjI1LS44NjNhLjczMi43MzIgMCAwIDAgLjEyOC0uMDM1Yy4wMTMtLjAxLjAxMS0uMDMyLS4wMi0uMjMtLjAzLS4xODEtLjAzOS0uMjE5LS4wNTItLjIyNy0uNjI3LjA2Ni0xLjMxMy41NTktMS42NTggMS4wMjl6bTIuMjY4LS41OThhLjQyNC40MjQgMCAwIDAgLjExNi4wMjZjLjMzMy4wNTMuNjE0LjE2Ni44ODcuMzU1YTIuMTA3IDIuMTA3IDAgMCAxIC44NyAyLjA4MiAyLjA5NiAyLjA5NiAwIDAgMS0xLjYyIDEuNjkzLjI5NS4yOTUgMCAwIDAtLjEuMDM0aDBjLS4wMDcuMDE4LjA2MS40My4wNzQuNDQzLjAwOS4wMS4wMzMuMDA4LjEzMi0uMDEzLjI4LS4wNi41NzEtLjE3OS44MjEtLjMzNmEyLjYxOCAyLjYxOCAwIDAgMCAxLjEyLTEuNTQ4Yy4wNzgtLjMxNC4wOTktLjY0Ny4wNTgtLjkxOGwtLjAxOS0uMTI1LS4xNTcuMDI0Yy0uMTg2LjAyNy0uMTkuMDI1LS4yMDYtLjA2NmEyLjA5OCAyLjA5OCAwIDAgMC0uMzM2LS43ODIgMS45NzggMS45NzggMCAwIDAtLjUwOC0uNTA0IDEuOTg2IDEuOTg2IDAgMCAwLTEuMTMyLS4zNjV6IiBmaWxsPSIjODRmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjUyMyIgc3Ryb2tlLXdpZHRoPSIuMzMwNzYxIiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBkPSJNMTA2OS41IDU2OC4zOWExOC43ODcgMTguNzg3IDAgMCAwLTguNjA1IDIuNDVjLS4zNjUuMjA1LS43MDIuMzc4LS43NS4zODQtLjE1MS4wMTktLjMyLS4xNzUtLjc1OC0uODctLjIzNS0uMzcxLS40NTUtLjY4LS40OS0uNjg5LS4wOTItLjAyLTEuMTE5LjY4Mi0xLjgyOSAxLjI1Mi0zLjA3NCAyLjQ3Mi01LjUyMyA1Ljk4LTYuNzA5IDkuNjA0YTYzLjAzIDYzLjAzIDAgMCAxLS4yNS43NTRjLS4xMzMuMzg3LS42MzcgMi43NS0uNzEyIDMuMzM4LS41MjEgNC4wNzIuMTcxIDguMzI5IDEuOTM3IDExLjkwOC4zODYuNzgxIDEuMDIzIDEuOTE1IDEuMTMgMi4wMDcuMDc2LjA2NS4yMTUgMCAuODc4LS40MTcuNTIyLS4zMy44MjYtLjQ4Ny45MDYtLjQ3LjA3NC4wMTcuMjYuMjI5LjQ4My41NDggNC4xMDMgNS44OTQgMTEuMzQ2IDguOTYgMTguNDU1IDcuODFhMTkuMzQyIDE5LjM0MiAwIDAgMCA2LjQ4LTIuMzA2Yy4zMjUtLjE5LjU5OS0uMzEuNjY4LS4yOTUuMDc1LjAxNi4yOTcuMzA0LjYxOS44LjI3Ni40MjcuNTI4Ljc4LjU1OS43ODguMTAyLjAyMiAxLjU2Mi0xLjA0MiAyLjM0LTEuNzA3YTIwLjk4MSAyMC45ODEgMCAwIDAgNS44MjItOC4xMzMgMjEuNTEyIDIxLjUxMiAwIDAgMCAxLjUxNS04LjQ0OGMtLjA4NC0zLjE0Ny0uOTQtNi40MzUtMi4zODQtOS4xNjItLjQyOS0uODA4LS44MjctMS40NTUtLjkwNy0xLjQ3Mi0uMDQtLjAxLS4zNzguMTgtLjc0OC40MThzLS43NDUuNDUzLS44MzQuNDc4Yy0uMTk1LjA1NC0uMjM3LjAxMi0uODM0LS44MTRhMTguODE4IDE4LjgxOCAwIDAgMC04LjI1LTYuNDE4Yy0xLjA1NS0uNDE2LTEuNzU2LS42MjctMi45NTMtLjg5YTIzLjQzOCAyMy40MzggMCAwIDAtMS43MjgtLjMyMSAxOS42ODYgMTkuNjg2IDAgMCAwLTMuMDUxLS4xMjd6bS4zNTMuNjI3YzEuNTk2LS4wMjcgMy4yMDcuMTYgNC44MDcuNTYyIDEuNTA5LjM4IDIuNDQ3LjcyNiAzLjc5OSAxLjQgNS45NCAyLjk2NiA5Ljg1OCA5LjE2MyAxMC4wMTYgMTUuODQzLjAxOS44MTQtLjAzNCAxLjg2NC0uMTM3IDIuNzM0LS4xMDIuODYzLS41MjUgMi43Mi0uODIyIDMuNmExOC4yMzcgMTguMjM3IDAgMCAxLTUuODAzIDguMzU3Yy0uNzQ0LjYwOC0yLjYyIDEuODAzLTMuNDk0IDIuMjI5YTE4LjEzIDE4LjEzIDAgMCAxLTExLjkzOCAxLjQwOGMtNC4xMy0uOTA5LTcuNjIxLTMuMDc2LTEwLjM1NC02LjQyNC0uNTY1LS42OTItMS43OTMtMi42NTMtMi4xOTctMy41MS0xLjQyLTMuMDA4LTEuOTkxLTYuMTItMS43MzItOS40NTkuMDQ4LS42My41NS0zLjIzLjc0NC0zLjg0My40NzgtMS41MjggMS4yNzQtMy4yMTkgMi4xNzctNC42MzMuODctMS4zNiAyLjQ3NC0zLjEyMiAzLjg4My00LjI1OC43OTMtLjY0IDIuMzc1LTEuNjQ3IDMuMjktMi4wOTggMi40OC0xLjIyMiA1LjEwMS0xLjg2MiA3Ljc2LTEuOTA4eiIgZmlsbD0iIzBjY2NjYyIgb3BhY2l0eT0iLjUiIHRyYW5zZm9ybT0ibWF0cml4KC4xNjc1OSAwIDAgLjE2ODE1IDYwLjExNSAyNTguNjgzKSIgc3Ryb2tlLXdpZHRoPSIuMjU4IiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBmaWxsPSJub25lIiBwYWludC1vcmRlcj0ic3Ryb2tlIG1hcmtlcnMgZmlsbCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYiIGQ9Ik0yNDUuNzggMzQyLjU5aDMuMjY5djMuMjY5aC0zLjI2OXoiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItNzIuMTk5IiBjeT0iNDIyLjA5IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2ZmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii03OS42ODMiIGN5PSI0MjkuNTciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjOTk5Ii8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTgzLjQyNCIgY3k9IjQzMy4zMiIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlNmNjNzMiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItODcuMTY2IiBjeT0iNDM3LjA2IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iIzA5YyIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii05MC45MDgiIGN5PSI0NDAuOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlMzgyNTkiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItOTQuNjUiIGN5PSI0NDQuNTQiIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjZjJiNWEzIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTk4LjM5MSIgY3k9IjQ0OC4yOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNiN2E2ODUiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItMTAyLjEzIiBjeT0iNDUyLjAzIiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2FiZWFmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii0xMDUuODciIGN5PSI0NTUuNzciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjN2FiMGZmIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTc1Ljk0MSIgY3k9IjQyNS44MyIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYxODAiLz48L2c+PC9zdmc+) no-repeat -40px -20px;
+    width: 20px;
+    height: 20px
+}
+
+.pioneer-label-div.spacecraft .icon {
+    background-position-y: 0
+}
+
+.pioneer-label-div:hover .icon {
+    opacity: var(--iconHover);
+    animation-fill-mode: none;
+    -webkit-animation-fill-mode: none
+}
+
+.touch .pioneer-label-div:hover .icon {
+    opacity: var(--iconFadeIn)
+}
+
+.pioneer-label-div.active:hover .text {
+    opacity: var(--textHover);
+    animation-fill-mode: none;
+    -webkit-animation-fill-mode: none
+}
+
+.touch .pioneer-label-div:hover .text {
+    opacity: var(--textFadeIn)
+}
+
+.pioneer-label-div.selection.active .text {
+    animation-name: none;
+    -webkit-animation-name: none;
+    opacity: var(--textHover)
+}
+
+.pioneer-label-div.selection.active .icon {
+    animation-name: none;
+    -webkit-animation-name: none;
+    opacity: var(--iconHover)
+}
+
+.pioneer-label-div.selection.active:before {
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMjIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04ODUuMSAtMTI5MC45Nikgc2NhbGUoMy43Nzk1KSI+PHBhdGggZD0iTTIzNy4zOTIgMzQ1LjM1NWMtLjM2LjUtLjUyOCAxLjEwNi0uNDc5IDEuNzE2LjAwMy4wMjQuMDEuMDc4LjAxNy4xMmwuMDE0LjA3Ni4xNTktLjAyMWEuNTYuNTYgMCAwIDEgLjE3My0uMDEyLjU4Ny41ODcgMCAwIDEgLjA1LjE1IDIuMDY3IDIuMDY3IDAgMCAwIDEuMTYzIDEuNDA1Yy4xOTcuMDkuNDk2LjE2NS42OTQuMTc0LjEyOC4wMDYuMTE2LS4wMDQtLjAzOC0uMDMxYTIuMTAxIDIuMTAxIDAgMCAxLTEuNjctMS40NSAyLjUxNyAyLjUxNyAwIDAgMS0uMDk0LS41NzVjLS4wMDUtLjQ1MS4xMTctLjg2Mi4zNjMtMS4yMjYuMjk2LS40MzcuNzYtLjc1OCAxLjI1LS44NjNhLjczMi43MzIgMCAwIDAgLjEyOC0uMDM1Yy4wMTMtLjAxLjAxMS0uMDMyLS4wMi0uMjMtLjAzLS4xODEtLjAzOS0uMjE5LS4wNTItLjIyNy0uNjI3LjA2Ni0xLjMxMy41NTktMS42NTggMS4wMjl6bTIuMjY4LS41OThhLjQyNC40MjQgMCAwIDAgLjExNi4wMjZjLjMzMy4wNTMuNjE0LjE2Ni44ODcuMzU1YTIuMTA3IDIuMTA3IDAgMCAxIC44NyAyLjA4MiAyLjA5NiAyLjA5NiAwIDAgMS0xLjYyIDEuNjkzLjI5NS4yOTUgMCAwIDAtLjEuMDM0aDBjLS4wMDcuMDE4LjA2MS40My4wNzQuNDQzLjAwOS4wMS4wMzMuMDA4LjEzMi0uMDEzLjI4LS4wNi41NzEtLjE3OS44MjEtLjMzNmEyLjYxOCAyLjYxOCAwIDAgMCAxLjEyLTEuNTQ4Yy4wNzgtLjMxNC4wOTktLjY0Ny4wNTgtLjkxOGwtLjAxOS0uMTI1LS4xNTcuMDI0Yy0uMTg2LjAyNy0uMTkuMDI1LS4yMDYtLjA2NmEyLjA5OCAyLjA5OCAwIDAgMC0uMzM2LS43ODIgMS45NzggMS45NzggMCAwIDAtLjUwOC0uNTA0IDEuOTg2IDEuOTg2IDAgMCAwLTEuMTMyLS4zNjV6IiBmaWxsPSIjODRmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjUyMyIgc3Ryb2tlLXdpZHRoPSIuMzMwNzYxIiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBkPSJNMTA2OS41IDU2OC4zOWExOC43ODcgMTguNzg3IDAgMCAwLTguNjA1IDIuNDVjLS4zNjUuMjA1LS43MDIuMzc4LS43NS4zODQtLjE1MS4wMTktLjMyLS4xNzUtLjc1OC0uODctLjIzNS0uMzcxLS40NTUtLjY4LS40OS0uNjg5LS4wOTItLjAyLTEuMTE5LjY4Mi0xLjgyOSAxLjI1Mi0zLjA3NCAyLjQ3Mi01LjUyMyA1Ljk4LTYuNzA5IDkuNjA0YTYzLjAzIDYzLjAzIDAgMCAxLS4yNS43NTRjLS4xMzMuMzg3LS42MzcgMi43NS0uNzEyIDMuMzM4LS41MjEgNC4wNzIuMTcxIDguMzI5IDEuOTM3IDExLjkwOC4zODYuNzgxIDEuMDIzIDEuOTE1IDEuMTMgMi4wMDcuMDc2LjA2NS4yMTUgMCAuODc4LS40MTcuNTIyLS4zMy44MjYtLjQ4Ny45MDYtLjQ3LjA3NC4wMTcuMjYuMjI5LjQ4My41NDggNC4xMDMgNS44OTQgMTEuMzQ2IDguOTYgMTguNDU1IDcuODFhMTkuMzQyIDE5LjM0MiAwIDAgMCA2LjQ4LTIuMzA2Yy4zMjUtLjE5LjU5OS0uMzEuNjY4LS4yOTUuMDc1LjAxNi4yOTcuMzA0LjYxOS44LjI3Ni40MjcuNTI4Ljc4LjU1OS43ODguMTAyLjAyMiAxLjU2Mi0xLjA0MiAyLjM0LTEuNzA3YTIwLjk4MSAyMC45ODEgMCAwIDAgNS44MjItOC4xMzMgMjEuNTEyIDIxLjUxMiAwIDAgMCAxLjUxNS04LjQ0OGMtLjA4NC0zLjE0Ny0uOTQtNi40MzUtMi4zODQtOS4xNjItLjQyOS0uODA4LS44MjctMS40NTUtLjkwNy0xLjQ3Mi0uMDQtLjAxLS4zNzguMTgtLjc0OC40MThzLS43NDUuNDUzLS44MzQuNDc4Yy0uMTk1LjA1NC0uMjM3LjAxMi0uODM0LS44MTRhMTguODE4IDE4LjgxOCAwIDAgMC04LjI1LTYuNDE4Yy0xLjA1NS0uNDE2LTEuNzU2LS42MjctMi45NTMtLjg5YTIzLjQzOCAyMy40MzggMCAwIDAtMS43MjgtLjMyMSAxOS42ODYgMTkuNjg2IDAgMCAwLTMuMDUxLS4xMjd6bS4zNTMuNjI3YzEuNTk2LS4wMjcgMy4yMDcuMTYgNC44MDcuNTYyIDEuNTA5LjM4IDIuNDQ3LjcyNiAzLjc5OSAxLjQgNS45NCAyLjk2NiA5Ljg1OCA5LjE2MyAxMC4wMTYgMTUuODQzLjAxOS44MTQtLjAzNCAxLjg2NC0uMTM3IDIuNzM0LS4xMDIuODYzLS41MjUgMi43Mi0uODIyIDMuNmExOC4yMzcgMTguMjM3IDAgMCAxLTUuODAzIDguMzU3Yy0uNzQ0LjYwOC0yLjYyIDEuODAzLTMuNDk0IDIuMjI5YTE4LjEzIDE4LjEzIDAgMCAxLTExLjkzOCAxLjQwOGMtNC4xMy0uOTA5LTcuNjIxLTMuMDc2LTEwLjM1NC02LjQyNC0uNTY1LS42OTItMS43OTMtMi42NTMtMi4xOTctMy41MS0xLjQyLTMuMDA4LTEuOTkxLTYuMTItMS43MzItOS40NTkuMDQ4LS42My41NS0zLjIzLjc0NC0zLjg0My40NzgtMS41MjggMS4yNzQtMy4yMTkgMi4xNzctNC42MzMuODctMS4zNiAyLjQ3NC0zLjEyMiAzLjg4My00LjI1OC43OTMtLjY0IDIuMzc1LTEuNjQ3IDMuMjktMi4wOTggMi40OC0xLjIyMiA1LjEwMS0xLjg2MiA3Ljc2LTEuOTA4eiIgZmlsbD0iIzBjY2NjYyIgb3BhY2l0eT0iLjUiIHRyYW5zZm9ybT0ibWF0cml4KC4xNjc1OSAwIDAgLjE2ODE1IDYwLjExNSAyNTguNjgzKSIgc3Ryb2tlLXdpZHRoPSIuMjU4IiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBmaWxsPSJub25lIiBwYWludC1vcmRlcj0ic3Ryb2tlIG1hcmtlcnMgZmlsbCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYiIGQ9Ik0yNDUuNzggMzQyLjU5aDMuMjY5djMuMjY5aC0zLjI2OXoiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItNzIuMTk5IiBjeT0iNDIyLjA5IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2ZmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii03OS42ODMiIGN5PSI0MjkuNTciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjOTk5Ii8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTgzLjQyNCIgY3k9IjQzMy4zMiIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlNmNjNzMiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItODcuMTY2IiBjeT0iNDM3LjA2IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iIzA5YyIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii05MC45MDgiIGN5PSI0NDAuOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlMzgyNTkiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItOTQuNjUiIGN5PSI0NDQuNTQiIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjZjJiNWEzIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTk4LjM5MSIgY3k9IjQ0OC4yOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNiN2E2ODUiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItMTAyLjEzIiBjeT0iNDUyLjAzIiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2FiZWFmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii0xMDUuODciIGN5PSI0NTUuNzciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjN2FiMGZmIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTc1Ljk0MSIgY3k9IjQyNS44MyIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYxODAiLz48L2c+PC9zdmc+) no-repeat 0 0;
+    animation: inner-spin 15s linear .5s infinite alternate-reverse;
+    animation-fill-mode: both;
+    -webkit-animation: inner-spin 15s linear .5s infinite alternate-reverse;
+    -webkit-animation-fill-mode: both
+}
+
+.pioneer-label-div.selection.active:after,
+.pioneer-label-div.selection.active:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: scale(var(--selectionScale))
+}
+
+.pioneer-label-div.selection.active:after {
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMjIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04ODUuMSAtMTI5MC45Nikgc2NhbGUoMy43Nzk1KSI+PHBhdGggZD0iTTIzNy4zOTIgMzQ1LjM1NWMtLjM2LjUtLjUyOCAxLjEwNi0uNDc5IDEuNzE2LjAwMy4wMjQuMDEuMDc4LjAxNy4xMmwuMDE0LjA3Ni4xNTktLjAyMWEuNTYuNTYgMCAwIDEgLjE3My0uMDEyLjU4Ny41ODcgMCAwIDEgLjA1LjE1IDIuMDY3IDIuMDY3IDAgMCAwIDEuMTYzIDEuNDA1Yy4xOTcuMDkuNDk2LjE2NS42OTQuMTc0LjEyOC4wMDYuMTE2LS4wMDQtLjAzOC0uMDMxYTIuMTAxIDIuMTAxIDAgMCAxLTEuNjctMS40NSAyLjUxNyAyLjUxNyAwIDAgMS0uMDk0LS41NzVjLS4wMDUtLjQ1MS4xMTctLjg2Mi4zNjMtMS4yMjYuMjk2LS40MzcuNzYtLjc1OCAxLjI1LS44NjNhLjczMi43MzIgMCAwIDAgLjEyOC0uMDM1Yy4wMTMtLjAxLjAxMS0uMDMyLS4wMi0uMjMtLjAzLS4xODEtLjAzOS0uMjE5LS4wNTItLjIyNy0uNjI3LjA2Ni0xLjMxMy41NTktMS42NTggMS4wMjl6bTIuMjY4LS41OThhLjQyNC40MjQgMCAwIDAgLjExNi4wMjZjLjMzMy4wNTMuNjE0LjE2Ni44ODcuMzU1YTIuMTA3IDIuMTA3IDAgMCAxIC44NyAyLjA4MiAyLjA5NiAyLjA5NiAwIDAgMS0xLjYyIDEuNjkzLjI5NS4yOTUgMCAwIDAtLjEuMDM0aDBjLS4wMDcuMDE4LjA2MS40My4wNzQuNDQzLjAwOS4wMS4wMzMuMDA4LjEzMi0uMDEzLjI4LS4wNi41NzEtLjE3OS44MjEtLjMzNmEyLjYxOCAyLjYxOCAwIDAgMCAxLjEyLTEuNTQ4Yy4wNzgtLjMxNC4wOTktLjY0Ny4wNTgtLjkxOGwtLjAxOS0uMTI1LS4xNTcuMDI0Yy0uMTg2LjAyNy0uMTkuMDI1LS4yMDYtLjA2NmEyLjA5OCAyLjA5OCAwIDAgMC0uMzM2LS43ODIgMS45NzggMS45NzggMCAwIDAtLjUwOC0uNTA0IDEuOTg2IDEuOTg2IDAgMCAwLTEuMTMyLS4zNjV6IiBmaWxsPSIjODRmZmZmIiBzdHJva2Utb3BhY2l0eT0iLjUyMyIgc3Ryb2tlLXdpZHRoPSIuMzMwNzYxIiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBkPSJNMTA2OS41IDU2OC4zOWExOC43ODcgMTguNzg3IDAgMCAwLTguNjA1IDIuNDVjLS4zNjUuMjA1LS43MDIuMzc4LS43NS4zODQtLjE1MS4wMTktLjMyLS4xNzUtLjc1OC0uODctLjIzNS0uMzcxLS40NTUtLjY4LS40OS0uNjg5LS4wOTItLjAyLTEuMTE5LjY4Mi0xLjgyOSAxLjI1Mi0zLjA3NCAyLjQ3Mi01LjUyMyA1Ljk4LTYuNzA5IDkuNjA0YTYzLjAzIDYzLjAzIDAgMCAxLS4yNS43NTRjLS4xMzMuMzg3LS42MzcgMi43NS0uNzEyIDMuMzM4LS41MjEgNC4wNzIuMTcxIDguMzI5IDEuOTM3IDExLjkwOC4zODYuNzgxIDEuMDIzIDEuOTE1IDEuMTMgMi4wMDcuMDc2LjA2NS4yMTUgMCAuODc4LS40MTcuNTIyLS4zMy44MjYtLjQ4Ny45MDYtLjQ3LjA3NC4wMTcuMjYuMjI5LjQ4My41NDggNC4xMDMgNS44OTQgMTEuMzQ2IDguOTYgMTguNDU1IDcuODFhMTkuMzQyIDE5LjM0MiAwIDAgMCA2LjQ4LTIuMzA2Yy4zMjUtLjE5LjU5OS0uMzEuNjY4LS4yOTUuMDc1LjAxNi4yOTcuMzA0LjYxOS44LjI3Ni40MjcuNTI4Ljc4LjU1OS43ODguMTAyLjAyMiAxLjU2Mi0xLjA0MiAyLjM0LTEuNzA3YTIwLjk4MSAyMC45ODEgMCAwIDAgNS44MjItOC4xMzMgMjEuNTEyIDIxLjUxMiAwIDAgMCAxLjUxNS04LjQ0OGMtLjA4NC0zLjE0Ny0uOTQtNi40MzUtMi4zODQtOS4xNjItLjQyOS0uODA4LS44MjctMS40NTUtLjkwNy0xLjQ3Mi0uMDQtLjAxLS4zNzguMTgtLjc0OC40MThzLS43NDUuNDUzLS44MzQuNDc4Yy0uMTk1LjA1NC0uMjM3LjAxMi0uODM0LS44MTRhMTguODE4IDE4LjgxOCAwIDAgMC04LjI1LTYuNDE4Yy0xLjA1NS0uNDE2LTEuNzU2LS42MjctMi45NTMtLjg5YTIzLjQzOCAyMy40MzggMCAwIDAtMS43MjgtLjMyMSAxOS42ODYgMTkuNjg2IDAgMCAwLTMuMDUxLS4xMjd6bS4zNTMuNjI3YzEuNTk2LS4wMjcgMy4yMDcuMTYgNC44MDcuNTYyIDEuNTA5LjM4IDIuNDQ3LjcyNiAzLjc5OSAxLjQgNS45NCAyLjk2NiA5Ljg1OCA5LjE2MyAxMC4wMTYgMTUuODQzLjAxOS44MTQtLjAzNCAxLjg2NC0uMTM3IDIuNzM0LS4xMDIuODYzLS41MjUgMi43Mi0uODIyIDMuNmExOC4yMzcgMTguMjM3IDAgMCAxLTUuODAzIDguMzU3Yy0uNzQ0LjYwOC0yLjYyIDEuODAzLTMuNDk0IDIuMjI5YTE4LjEzIDE4LjEzIDAgMCAxLTExLjkzOCAxLjQwOGMtNC4xMy0uOTA5LTcuNjIxLTMuMDc2LTEwLjM1NC02LjQyNC0uNTY1LS42OTItMS43OTMtMi42NTMtMi4xOTctMy41MS0xLjQyLTMuMDA4LTEuOTkxLTYuMTItMS43MzItOS40NTkuMDQ4LS42My41NS0zLjIzLjc0NC0zLjg0My40NzgtMS41MjggMS4yNzQtMy4yMTkgMi4xNzctNC42MzMuODctMS4zNiAyLjQ3NC0zLjEyMiAzLjg4My00LjI1OC43OTMtLjY0IDIuMzc1LTEuNjQ3IDMuMjktMi4wOTggMi40OC0xLjIyMiA1LjEwMS0xLjg2MiA3Ljc2LTEuOTA4eiIgZmlsbD0iIzBjY2NjYyIgb3BhY2l0eT0iLjUiIHRyYW5zZm9ybT0ibWF0cml4KC4xNjc1OSAwIDAgLjE2ODE1IDYwLjExNSAyNTguNjgzKSIgc3Ryb2tlLXdpZHRoPSIuMjU4IiBzdHJva2U9IiMwY2NjY2MiLz48cGF0aCBmaWxsPSJub25lIiBwYWludC1vcmRlcj0ic3Ryb2tlIG1hcmtlcnMgZmlsbCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYiIGQ9Ik0yNDUuNzggMzQyLjU5aDMuMjY5djMuMjY5aC0zLjI2OXoiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItNzIuMTk5IiBjeT0iNDIyLjA5IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2ZmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii03OS42ODMiIGN5PSI0MjkuNTciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjOTk5Ii8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTgzLjQyNCIgY3k9IjQzMy4zMiIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlNmNjNzMiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItODcuMTY2IiBjeT0iNDM3LjA2IiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iIzA5YyIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii05MC45MDgiIGN5PSI0NDAuOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNlMzgyNTkiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItOTQuNjUiIGN5PSI0NDQuNTQiIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjZjJiNWEzIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTk4LjM5MSIgY3k9IjQ0OC4yOCIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNiN2E2ODUiLz48Y2lyY2xlIHRyYW5zZm9ybT0icm90YXRlKC00NSkiIGN4PSItMTAyLjEzIiBjeT0iNDUyLjAzIiByPSIyLjAxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii4zMzEiIHN0cm9rZT0iI2FiZWFmZiIvPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgY3g9Ii0xMDUuODciIGN5PSI0NTUuNzciIHI9IjIuMDE4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iLjMzMSIgc3Ryb2tlPSIjN2FiMGZmIi8+PGNpcmNsZSB0cmFuc2Zvcm09InJvdGF0ZSgtNDUpIiBjeD0iLTc1Ljk0MSIgY3k9IjQyNS44MyIgcj0iMi4wMTgiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIuMzMxIiBzdHJva2U9IiNmZmYxODAiLz48L2c+PC9zdmc+) no-repeat 0 -40px;
+    animation: outer-spin 15s ease-in-out 0s infinite normal;
+    animation-fill-mode: both;
+    -webkit-animation: outer-spin 15s ease-in-out 0s infinite normal;
+    -webkit-animation-fill-mode: both
+}
+
+@keyframes outer-spin {
+    30% {
+        transform: rotate(200deg) scale(var(--selectionScale))
+    }
+    45% {
+        transform: rotate(150deg) scale(var(--selectionScale))
+    }
+    60% {
+        transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    75% {
+        transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    to {
+        transform: rotate(1turn) scale(var(--selectionScale))
+    }
+}
+
+@keyframes inner-spin {
+    30% {
+        transform: rotate(200deg) scale(var(--selectionScale))
+    }
+    45% {
+        transform: rotate(150deg) scale(var(--selectionScale))
+    }
+    60% {
+        transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    75% {
+        transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    to {
+        transform: rotate(1turn) scale(var(--selectionScale))
+    }
+}
+
+@-webkit-keyframes outer-spin {
+    30% {
+        -webkit-transform: rotate(200deg) scale(var(--selectionScale))
+    }
+    45% {
+        -webkit-transform: rotate(150deg) scale(var(--selectionScale))
+    }
+    60% {
+        -webkit-transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    75% {
+        -webkit-transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    to {
+        -webkit-transform: rotate(1turn) scale(var(--selectionScale))
+    }
+}
+
+@-webkit-keyframes inner-spin {
+    30% {
+        -webkit-transform: rotate(200deg) scale(var(--selectionScale))
+    }
+    45% {
+        -webkit-transform: rotate(150deg) scale(var(--selectionScale))
+    }
+    60% {
+        -webkit-transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    75% {
+        -webkit-transform: rotate(180deg) scale(var(--selectionScale))
+    }
+    to {
+        -webkit-transform: rotate(1turn) scale(var(--selectionScale))
+    }
+}
+
+.pioneer-label-div.sun .icon {
+    background-position-y: -40px
+}
+
+.pioneer-label-div.mercury .icon,
+.pioneer-label-div.parent-mercury .icon {
+    background-position-y: -60px
+}
+
+.pioneer-label-div.parent-venus .icon,
+.pioneer-label-div.venus .icon {
+    background-position-y: -80px
+}
+
+.pioneer-label-div.earth .icon,
+.pioneer-label-div.parent-earth .icon {
+    background-position-y: -100px
+}
+
+.pioneer-label-div.mars .icon,
+.pioneer-label-div.parent-mars .icon {
+    background-position-y: -120px
+}
+
+.pioneer-label-div.jupiter .icon,
+.pioneer-label-div.parent-jupiter .icon {
+    background-position-y: -140px
+}
+
+.pioneer-label-div.parent-saturn .icon,
+.pioneer-label-div.saturn .icon {
+    background-position-y: -160px
+}
+
+.pioneer-label-div.parent-uranus .icon,
+.pioneer-label-div.uranus .icon {
+    background-position-y: -180px
+}
+
+.pioneer-label-div.neptune .icon,
+.pioneer-label-div.parent-neptune .icon {
+    background-position-y: -200px
+}
+
+.pioneer-label-div.asteroid,
+.pioneer-label-div.comet,
+.pioneer-label-div.dwarf-planet,
+.pioneer-label-div.spacecraft {
+    font-size: .9em
+}
+
+.pioneer-label-div.asteroid.active .text,
+.pioneer-label-div.comet.active .text,
+.pioneer-label-div.dwarf-planet.active .text,
+.pioneer-label-div.spacecraft.active .text {
+    animation-name: textFadeInSmall;
+    -webkit-animation-name: textFadeInSmall
+}
+
+.pioneer-label-div.asteroid.hidden .text,
+.pioneer-label-div.comet.hidden .text,
+.pioneer-label-div.dwarf-planet.hidden .text,
+.pioneer-label-div.spacecraft.hidden .text {
+    animation-name: textFadeOutSmall;
+    -webkit-animation-name: textFadeOutSmall
+}
+
+.pioneer-label-div.selection.asteroid.active .text,
+.pioneer-label-div.selection.comet.active .text,
+.pioneer-label-div.selection.dwarf-planet.active .text,
+.pioneer-label-div.selection.spacecraft.active .text {
+    opacity: var(--textHover);
+    animation-name: none;
+    -webkit-animation-name: none
+}
+
+@keyframes textFadeOutSmall {
+    0% {
+        opacity: var(--smallTextFadeIn)
+    }
+    to {
+        opacity: var(--smallTextFadeOut)
+    }
+}
+
+@keyframes textFadeInSmall {
+    0% {
+        opacity: var(--smallTextFadeOut)
+    }
+    to {
+        opacity: var(--smallTextFadeIn)
+    }
+}
+
+@-webkit-keyframes textFadeOutSmall {
+    0% {
+        opacity: var(--smallTextFadeIn)
+    }
+    to {
+        opacity: var(--smallTextFadeOut)
+    }
+}
+
+@-webkit-keyframes textFadeInSmall {
+    0% {
+        opacity: var(--smallTextFadeOut)
+    }
+    to {
+        opacity: var(--smallTextFadeIn)
+    }
+}
+
+.pioneer-label-div.asteroid .icon,
+.pioneer-label-div.comet .icon,
+.pioneer-label-div.dwarf-planet .icon,
+.pioneer-label-div.spacecraft .icon {
+    transform: scale(.75);
+    -webkit-transform: scale(.75)
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    .pioneer-label-div .icon {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+    .pioneer-label-div.asteroid .icon,
+    .pioneer-label-div.comet .icon,
+    .pioneer-label-div.dwarf-planet .icon,
+    .pioneer-label-div.spacecraft .icon {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+    .pioneer-label-div.selection.active:before {
+        animation: inner-spin 15s linear .5s infinite alternate-reverse;
+        -webkit-animation: inner-spin 15s linear .5s infinite alternate-reverse
+    }
+    .pioneer-label-div.selection.active:after,
+    .pioneer-label-div.selection.active:before {
+        transform: scale(calc(1.25*var(--selectionScale)));
+        -webkit-transform: scale(calc(1.25*var(--selectionScale)))
+    }
+    .pioneer-label-div.selection.active:after {
+        animation: outer-spin 15s ease-in-out 0s infinite normal;
+        -webkit-animation: outer-spin 15s ease-in-out 0s infinite normal
+    }
+    @keyframes outer-spin {
+        30% {
+            transform: rotate(200deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        45% {
+            transform: rotate(150deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        60% {
+            transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        75% {
+            transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        to {
+            transform: rotate(1turn) scale(calc(1.25*var(--selectionScale)))
+        }
+    }
+    @keyframes inner-spin {
+        30% {
+            transform: rotate(200deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        45% {
+            transform: rotate(150deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        60% {
+            transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        75% {
+            transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        to {
+            transform: rotate(1turn) scale(calc(1.25*var(--selectionScale)))
+        }
+    }
+    @-webkit-keyframes outer-spin {
+        30% {
+            -webkit-transform: rotate(200deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        45% {
+            -webkit-transform: rotate(150deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        60% {
+            -webkit-transform: rotate(180deg scale(calc(1.25*var(--selectionScale))))
+        }
+        75% {
+            -webkit-transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        to {
+            -webkit-transform: rotate(1turn) scale(calc(1.25*var(--selectionScale)))
+        }
+    }
+    @-webkit-keyframes inner-spin {
+        30% {
+            -webkit-transform: rotate(200deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        45% {
+            -webkit-transform: rotate(150deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        60% {
+            -webkit-transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        75% {
+            -webkit-transform: rotate(180deg) scale(calc(1.25*var(--selectionScale)))
+        }
+        to {
+            -webkit-transform: rotate(1turn) scale(calc(1.25*var(--selectionScale)))
+        }
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    .pioneer-label-div .icon {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+    .pioneer-label-div.asteroid .icon,
+    .pioneer-label-div.comet .icon,
+    .pioneer-label-div.dwarf-planet .icon,
+    .pioneer-label-div.spacecraft .icon {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+    .pioneer-label-div.selection.active:before {
+        animation: inner-spin 15s linear .5s infinite alternate-reverse;
+        transform: scale(1.5);
+        -webkit-animation: inner-spin 15s linear .5s infinite alternate-reverse;
+        -webkit-transform: scale(1.5)
+    }
+    .pioneer-label-div.selection.active:after {
+        animation: outer-spin 15s ease-in-out 0s infinite normal;
+        transform: scale(1.5);
+        -webkit-animation: outer-spin 15s ease-in-out 0s infinite normal;
+        -webkit-transform: scale(1.5)
+    }
+    @keyframes outer-spin {
+        30% {
+            transform: rotate(200deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        45% {
+            transform: rotate(150deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        60% {
+            transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        75% {
+            transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        to {
+            transform: rotate(1turn) scale(calc(1.5*var(--selectionScale)))
+        }
+    }
+    @keyframes inner-spin {
+        30% {
+            transform: rotate(200deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        45% {
+            transform: rotate(150deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        60% {
+            transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        75% {
+            transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        to {
+            transform: rotate(1turn) scale(calc(1.5*var(--selectionScale)))
+        }
+    }
+    @-webkit-keyframes outer-spin {
+        30% {
+            -webkit-transform: rotate(200deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        45% {
+            -webkit-transform: rotate(150deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        60% {
+            -webkit-transform: rotate(180deg scale(calc(1.5*var(--selectionScale))))
+        }
+        75% {
+            -webkit-transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        to {
+            -webkit-transform: rotate(1turn) scale(calc(1.5*var(--selectionScale)))
+        }
+    }
+    @-webkit-keyframes inner-spin {
+        30% {
+            -webkit-transform: rotate(200deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        45% {
+            -webkit-transform: rotate(150deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        60% {
+            -webkit-transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        75% {
+            -webkit-transform: rotate(180deg) scale(calc(1.5*var(--selectionScale)))
+        }
+        to {
+            -webkit-transform: rotate(1turn) scale(calc(1.5*var(--selectionScale)))
+        }
+    }
+}
+
+#search-bar .search-container {
+    width: 101%;
+    border: 1px solid var(--borderColor);
+    border-radius: 1.4em;
+    background: var(--bg1)
+}
+
+#search-bar .search-container.empty {
+    background: var(--bg2)
+}
+
+#search-bar .search-container:hover {
+    border-color: hsla(0, 0%, 100%, .75)
+}
+
+#search-bar input {
+    background: none;
+    font-size: .85em;
+    padding: .75em 1.25em .75em 3.5em;
+    border: none;
+    color: var(--fg1);
+    opacity: .75;
+    height: 3em;
+    min-width: 250px
+}
+
+#search-bar input::placeholder {
+    color: var(--fg1);
+    opacity: .5;
+    text-transform: uppercase;
+    font-size: .85em
+}
+
+.touch #search-bar input:focus,
+.touch #search-bar input:hover {
+    opacity: .75
+}
+
+#search-bar .search-container:before {
+    content: "";
+    display: inline-block;
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: .25;
+    transform: scale(.75);
+    -webkit-transform: scale(.75);
+    transform-origin: left bottom;
+    margin: 0 .75em .4em;
+    z-index: 1
+}
+
+#search-bar .search-container form {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#search-bar #search-results {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    bottom: 2.5em;
+    width: 100%
+}
+
+#search-bar #search-results li {
+    text-decoration: none;
+    display: block
+}
+
+#search-bar #search-results li button {
+    color: var(--fg1);
+    border-bottom: 1px solid var(--borderColor);
+    width: 100%;
+    font-size: .85em;
+    padding: 1em .75em;
+    margin: 0;
+    pointer-events: all;
+    outline: none
+}
+
+#search-bar #search-results li.selection button {
+    background-color: var(--bgselection)
+}
+
+#search-bar #search-results li.selection.last button {
+    border-radius: 1.4em 1.4em 0 0
+}
+
+#search-bar #search-results li:hover,
+#search-bar #search-results li button:hover,
+.touch #search-bar #search-results li:hover,
+.touch #search-bar #search-results li button:hover {
+    cursor: pointer
+}
+
+#search-bar .search-toggle {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 5px;
+    z-index: 101;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+@media only screen and (max-width:64em) {
+    #search-bar .search-container {
+        margin: 0 auto;
+        width: 100%;
+        border-radius: 0;
+        border: 0
+    }
+    #search-bar .search-toggle {
+        transform: scale(.75);
+        -webkit-transform: scale(.75);
+        margin-left: 0
+    }
+    #search-bar .search-toggle.active {
+        background-position-y: -360px
+    }
+    #search-bar input {
+        position: absolute;
+        left: 50px;
+        bottom: 0;
+        width: calc(100vw - 50px);
+        background: var(--bgmobile);
+        opacity: 1;
+        height: 50px;
+        border: 0;
+        font-size: 1.2em;
+        z-index: 2
+    }
+    .touch #search-bar input:focus {
+        opacity: 1;
+        background: #000
+    }
+    #search-bar #search-results {
+        width: 100vw;
+        bottom: 50px;
+        z-index: 3;
+        position: absolute
+    }
+    #search-bar .bg {
+        display: block;
+        background: var(--bgmobile);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1
+    }
+    #search-bar #search-results.empty:before {
+        display: none
+    }
+    #search-bar #search-results li,
+    #search-bar #search-results li button {
+        opacity: 1;
+        height: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: var(--bgmobile)
+    }
+    #search-bar #search-results li.selection button {
+        background-color: var(--bgmobile)
+    }
+    #search-bar .search-container:before {
+        display: none
+    }
+    #search-bar #search-results li button {
+        width: 100%
+    }
+}
+
+@media only screen and (max-height:48em) {
+    #search-bar .search-container:before {
+        margin-bottom: .3em
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #search-bar .search-container:before {
+        margin-bottom: .1em
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #search-bar .search-container:before {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #search-bar .search-container:before {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+}
+
+#details-panel {
+    --paddingSize: 2vw;
+    --mobilePaddingSize: 7vw;
+    display: none;
+    pointer-events: all
+}
+
+#details-panel .container {
+    border: 1px solid var(--borderColor);
+    pointer-events: all;
+    position: absolute;
+    left: 2vw;
+    width: calc(100% - 2vw);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg2);
+    overflow: hidden
+}
+
+#details-panel.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: panelFadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: panelFadeIn
+}
+
+#details-panel.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: panelFadeOutLeft;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: panelFadeOutLeft;
+    pointer-events: none
+}
+
+@keyframes panelFadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+}
+
+@-webkit-keyframes panelFadeOutLeft {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(-100%)
+    }
+}
+
+@keyframes panelFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes panelFadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@keyframes panelFadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateX(0)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes panelFadeInBottom {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+}
+
+@keyframes panelFadeOutBottom {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+}
+
+@-webkit-keyframes panelFadeOutBottom {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateX(0)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translateY(100%)
+    }
+}
+
+@keyframes panelFadeInOut {
+    0% {
+        opacity: 0
+    }
+    5% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes panelFadeInOut {
+    0% {
+        opacity: 0
+    }
+    5% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+#details-panel .details-toggle {
+    display: none
+}
+
+#details-panel .details-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -360px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    pointer-events: all;
+    display: block;
+    z-index: 100
+}
+
+#details-panel h1 {
+    padding: 0 var(--paddingSize);
+    margin-bottom: .15em;
+    margin-top: .6em;
+    pointer-events: all;
+    user-select: text;
+    font-weight: 500;
+    font-size: 2.5em;
+    line-height: 1em;
+    word-break: break-word
+}
+
+#details-panel .category {
+    font-family: var(--font2);
+    font-size: .9em;
+    font-weight: 300;
+    margin: 0 0 .5em;
+    padding: 0 var(--paddingSize)
+}
+
+#details-panel .category:before,
+#details-panel .category span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#details-panel .category:before {
+    content: "";
+    margin-right: .5em;
+    background: transparent url(0a8401113e19869c3a5da3fa5cbe99f1.svg) no-repeat;
+    background-position-x: 0;
+    width: 30px;
+    height: 30px
+}
+
+#details-panel .category.asteroid:before {
+    background-position-y: 0
+}
+
+#details-panel .category.star:before {
+    background-position-y: -30px
+}
+
+#details-panel .category.gas-giant:before {
+    background-position-y: -60px
+}
+
+#details-panel .category.ice-giant:before {
+    background-position-y: -240px
+}
+
+#details-panel .category.terrestrial-planet:before {
+    background-position-y: -90px
+}
+
+#details-panel .category.spacecraft:before {
+    background-position-y: -120px
+}
+
+#details-panel .category.spacecraft.orbiter:before {
+    background-position-y: -270px
+}
+
+#details-panel .category.spacecraft.flyby:before {
+    background-position-y: -300px
+}
+
+#details-panel .category.spacecraft.lander:before {
+    background-position-y: -330px
+}
+
+#details-panel .category.spacecraft.rover:before {
+    background-position-y: -360px
+}
+
+#details-panel .category.comet:before {
+    background-position-y: -150px
+}
+
+#details-panel .category.moon:before {
+    background-position-y: -180px
+}
+
+#details-panel .category.dwarf-planet:before {
+    background-position-y: -210px
+}
+
+#details-panel .objectimage {
+    width: 100%;
+    margin: .5em auto 1em;
+    max-width: 375px;
+    display: block
+}
+
+#details-panel .objectimage.hidden {
+    display: none;
+    pointer-events: none
+}
+
+#details-panel .description,
+#details-panel .legend {
+    font-family: var(--font1);
+    width: 100%;
+    padding: 0 var(--paddingSize)
+}
+
+#details-panel .legend {
+    color: var(--fg3);
+    font-size: .8em;
+    text-align: left;
+    margin: 0
+}
+
+#details-panel .legend.hidden {
+    display: none
+}
+
+#details-panel .quickfacts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: var(--paddingSize);
+    margin-right: var(--paddingSize);
+    width: calc(100% - var(--paddingSize)*2);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: .4em .8em
+}
+
+#details-panel .quickfacts.hidden {
+    display: none;
+    pointer-events: none
+}
+
+#details-panel .data-block {
+    grid-template-rows: 1fr;
+    gap: .8em;
+    justify-content: start
+}
+
+#details-panel .data-block,
+#details-panel .data-block .data {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center
+}
+
+#details-panel .data-block .data {
+    font-family: var(--font1);
+    font-weight: 400;
+    font-size: 1.8em;
+    pointer-events: all;
+    user-select: text
+}
+
+#details-panel .data-block .data.infolike,
+#details-panel .data-block .info {
+    color: var(--fg1);
+    font-family: var(--font1);
+    font-weight: 300;
+    font-size: .8em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: left
+}
+
+#details-panel .label-block {
+    border-top: 1px solid var(--separator);
+    padding-top: .5em;
+    color: var(--fg3);
+    font-family: var(--font1);
+    font-weight: 400;
+    font-size: .8em;
+    margin-bottom: 1em;
+    text-transform: capitalize
+}
+
+#details-panel .quickfacts .icon:before,
+#details-panel .quickfacts .moons:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: transparent url(0a8401113e19869c3a5da3fa5cbe99f1.svg) no-repeat 0 -180px;
+    transform-origin: left center
+}
+
+#details-panel .quickfacts .icon:before {
+    transform: scale(1.33);
+    transform-origin: left center;
+    margin-right: calc(.4em + 13.3px)
+}
+
+#details-panel .quickfacts .moons:after {
+    margin-left: .4em
+}
+
+#details-panel .quickfacts .orbiter:before {
+    background-position-y: -270px
+}
+
+#details-panel .quickfacts .flyby:before {
+    background-position-y: -300px
+}
+
+#details-panel .quickfacts .lander:before {
+    background-position-y: -330px
+}
+
+#details-panel .quickfacts .rover:before {
+    background-position-y: -360px
+}
+
+#details-panel .quickfacts .asteroid:before,
+#details-panel .quickfacts .dwarf-planet:before,
+#details-panel .quickfacts .earth:before,
+#details-panel .quickfacts .inner-solar-system:before,
+#details-panel .quickfacts .jupiter:before,
+#details-panel .quickfacts .mars:before,
+#details-panel .quickfacts .mercury:before,
+#details-panel .quickfacts .moon:before,
+#details-panel .quickfacts .netpune:before,
+#details-panel .quickfacts .outer-solar-system:before,
+#details-panel .quickfacts .pluto:before,
+#details-panel .quickfacts .saturn:before,
+#details-panel .quickfacts .solar-system:before,
+#details-panel .quickfacts .sun:before,
+#details-panel .quickfacts .universe:before,
+#details-panel .quickfacts .uranus:before,
+#details-panel .quickfacts .venus:before {
+    background-image: url(3dc997c78ca826192fcd6869f316376d.svg);
+    width: 40px;
+    height: 40px;
+    transform: scale(1);
+    transform-origin: left center;
+    margin-right: .4em;
+    margin-bottom: 0;
+    background-position-y: 0
+}
+
+#details-panel .quickfacts .universe:before {
+    background-position-y: -720px
+}
+
+#details-panel .quickfacts .inner-solar-system:before,
+#details-panel .quickfacts .outer-solar-system:before,
+#details-panel .quickfacts .solar-system:before {
+    background-position-y: 0
+}
+
+#details-panel .quickfacts .sun:before {
+    background-position-y: -480px
+}
+
+#details-panel .quickfacts .mercury:before {
+    background-position-y: -240px
+}
+
+#details-panel .quickfacts .venus:before {
+    background-position-y: -360px
+}
+
+#details-panel .quickfacts .earth:before {
+    background-position-y: -40px
+}
+
+#details-panel .quickfacts .moon:before {
+    background-position-y: -120px
+}
+
+#details-panel .quickfacts .mars:before {
+    background-position-y: -80px
+}
+
+#details-panel .quickfacts .jupiter:before {
+    background-position-y: -160px
+}
+
+#details-panel .quickfacts .saturn:before {
+    background-position-y: -200px
+}
+
+#details-panel .quickfacts .uranus:before {
+    background-position-y: -320px
+}
+
+#details-panel .quickfacts .netpune:before {
+    background-position-y: -280px
+}
+
+#details-panel .quickfacts .pluto:before {
+    background-position-y: -440px
+}
+
+#details-panel .quickfacts .dwarf-planet:before {
+    background-position-y: -640px
+}
+
+#details-panel .quickfacts .comet:before {
+    background-position-y: -560px
+}
+
+#details-panel .quickfacts .asteroid:before {
+    background-position-y: -680px
+}
+
+#details-panel .system-switch {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: start;
+    gap: .2em
+}
+
+#details-panel .system-switch button {
+    padding: .5em .85em;
+    border: 1px solid var(--fg);
+    border-radius: 8px;
+    opacity: .5;
+    font-size: .8em
+}
+
+#details-panel .system-switch .active,
+#details-panel .system-switch button:hover {
+    opacity: 1
+}
+
+#details-panel .video-container {
+    display: grid;
+    justify-items: center;
+    margin: 1em auto;
+    width: 100%;
+    max-width: 375px
+}
+
+#details-panel .video-container.hidden {
+    display: none
+}
+
+#details-panel .video,
+#details-panel .video-container img {
+    max-width: 100%
+}
+
+#details-panel .read-more {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: .8em;
+    font-family: var(--font1);
+    font-weight: 400;
+    pointer-events: all;
+    text-transform: uppercase;
+    padding: 0 var(--paddingSize);
+    margin: 1em 0 1.5em
+}
+
+#details-panel .read-more:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat -40px -80px;
+    margin-left: .7em
+}
+
+#details-panel .footer {
+    position: relative;
+    padding: 1em var(--paddingSize);
+    border-top: 1px solid var(--borderColor);
+    margin-top: 1em;
+    text-align: center
+}
+
+#details-panel .footer.hidden {
+    display: none
+}
+
+#details-panel .footer .compare {
+    font-family: var(--font2);
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+#details-panel .tracking .unit {
+    margin-left: .5em;
+    opacity: .5;
+    text-transform: lowercase
+}
+
+.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden>.os-scrollbar-vertical,
+.os-scrollbar-vertical,
+.os-theme-dark>.os-scrollbar {
+    right: 6px;
+    top: 50px;
+    bottom: 15px
+}
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background: var(--borderColor);
+    width: 4px
+}
+
+.os-theme-dark>.os-scrollbar:active>.os-scrollbar-track>.os-scrollbar-handle,
+.os-theme-dark>.os-scrollbar:hover>.os-scrollbar-track>.os-scrollbar-handle {
+    background: var(--fg);
+    width: 6px
+}
+
+.os-theme-dark>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
+    min-height: 60px
+}
+
+@media only screen and (max-width:64em) {
+    #details-panel.mini {
+        height: auto;
+        text-align: center;
+        bottom: 90px;
+        left: 0;
+        margin: 0 auto;
+        padding: 0 20px
+    }
+    #details-panel.mini,
+    #details-panel.mini .container {
+        background: transparent;
+        pointer-events: none;
+        width: 100%;
+        top: auto
+    }
+    #details-panel.mini .container {
+        padding: 0;
+        transform: none;
+        border: 0;
+        position: relative;
+        left: auto;
+        animation: none
+    }
+    #details-panel.hidden {
+        animation-name: panelFadeOutBottom
+    }
+    #details-panel.mini.active {
+        animation-name: panelFadeInBottom
+    }
+    #details-panel.expand.active {
+        animation-duration: .25s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-name: panelFadeInOut;
+        border: 0;
+        background: var(--bgmobile);
+        pointer-events: all
+    }
+    #details-panel.expand {
+        transform: none;
+        position: absolute;
+        z-index: 100
+    }
+    #details-panel.expand .container {
+        pointer-events: all;
+        border: 0;
+        position: relative;
+        left: auto;
+        transform: none;
+        top: auto;
+        width: 100%;
+        animation: none
+    }
+    #details-panel.expand.hidden .container {
+        pointer-events: none
+    }
+    #details-panel .agency,
+    #details-panel .category,
+    #details-panel .description,
+    #details-panel .legend,
+    #details-panel .quickfacts,
+    #details-panel .read-more,
+    #details-panel .subtitle,
+    #details-panel h1 {
+        padding: 0 var(--mobilePaddingSize)
+    }
+    #details-panel h1 {
+        margin-top: 40px
+    }
+    #details-panel .legend {
+        text-align: center
+    }
+    #details-panel .footer {
+        padding: 1em var(--mobilePaddingSize);
+        border: 0;
+        margin-bottom: 40px
+    }
+    #details-panel .agency,
+    #details-panel .category {
+        top: 35px
+    }
+    #details-panel .video {
+        max-width: 100%
+    }
+    #details-panel.mini .compare,
+    #details-panel.mini .description,
+    #details-panel.mini .footer,
+    #details-panel.mini .legend,
+    #details-panel.mini .objectimage,
+    #details-panel.mini .quickfacts,
+    #details-panel.mini .read-more,
+    #details-panel.mini .video-container {
+        display: none;
+        pointer-events: none
+    }
+    #details-panel.mini h1 {
+        pointer-events: all;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1.3em;
+        font-family: var(--font2);
+        font-weight: 300;
+        color: var(--fg1);
+        margin: 0;
+        padding: 0
+    }
+    #details-panel.mini .category {
+        position: relative;
+        top: auto;
+        right: auto;
+        padding: 0;
+        margin: 0 auto;
+        pointer-events: all;
+        cursor: pointer;
+        display: table
+    }
+    #details-panel .details-toggle {
+        position: absolute;
+        top: 1vw;
+        right: 1vw;
+        background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -360px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        pointer-events: all;
+        display: block;
+        z-index: 100
+    }
+    #details-panel.mini .details-toggle {
+        position: relative;
+        transform: none;
+        margin: 0 auto;
+        background-position-y: -600px;
+        top: auto;
+        right: auto;
+        left: auto
+    }
+    #details-panel .details-close,
+    .os-theme-dark>.os-scrollbar-vertical {
+        display: none
+    }
+    #details-panel .system-switch {
+        gap: 1em
+    }
+    #details-panel .system-switch button {
+        font-size: 1em
+    }
+}
+
+@media only screen and (max-height:48em) {
+    #details-panel .system-switch button {
+        font-size: 1em
+    }
+}
+
+@media only screen and (max-height:64em) {
+    #details-panel .container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        transform: none;
+        -webkit-transform: none;
+        padding-top: 75px
+    }
+    #details-panel.expand .container {
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0
+    }
+    #details-panel.expand .container .description {
+        font-size: 1.15em
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:64em) {
+    #details-panel.expand .container {
+        padding-left: 15%;
+        padding-right: 15%
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #details-panel.mini {
+        bottom: 55px;
+        width: 100vw;
+        left: 0
+    }
+    #details-panel.mini .details-toggle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 3px
+    }
+    #details-panel.expand .details-toggle {
+        position: absolute;
+        bottom: 1vw;
+        right: 1vw;
+        left: auto;
+        margin: 3px;
+        transform: none
+    }
+    #details-panel.expand .container {
+        padding-left: 15%;
+        padding-right: 15%
+    }
+    #details-panel.mini .content {
+        font-size: 1em
+    }
+    #details-panel .content {
+        font-size: 1.1em
+    }
+    #details-panel .system-switch button {
+        font-size: 1em
+    }
+}
+
+@media only screen and (min-width:180em) and (max-height:68em) {
+    #details-panel {
+        min-width: 600px
+    }
+    #details-panel .container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        transform: none;
+        -webkit-transform: none
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #details-panel {
+        min-width: 600px
+    }
+    #details-panel .category:before,
+    #details-panel .quickfacts .moons:after,
+    #details-panel .read-more:after {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+    #details-panel .quickfacts .icon:before {
+        transform: scale(1.66);
+        -webkit-transform: scale(1.66);
+        margin-right: calc(20px + .4em)
+    }
+    #details-panel .quickfacts .asteroid:before,
+    #details-panel .quickfacts .dwarf-planet:before,
+    #details-panel .quickfacts .earth:before,
+    #details-panel .quickfacts .inner-solar-system:before,
+    #details-panel .quickfacts .jupiter:before,
+    #details-panel .quickfacts .mars:before,
+    #details-panel .quickfacts .mercury:before,
+    #details-panel .quickfacts .moon:before,
+    #details-panel .quickfacts .netpune:before,
+    #details-panel .quickfacts .outer-solar-system:before,
+    #details-panel .quickfacts .pluto:before,
+    #details-panel .quickfacts .saturn:before,
+    #details-panel .quickfacts .solar-system:before,
+    #details-panel .quickfacts .sun:before,
+    #details-panel .quickfacts .universe:before,
+    #details-panel .quickfacts .uranus:before,
+    #details-panel .quickfacts .venus:before {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        margin-right: calc(10px + .4em)
+    }
+    #details-panel .details-close {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform-origin: right top
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #details-panel {
+        min-width: 600px
+    }
+    #details-panel .category:before,
+    #details-panel .quickfacts .moons:after,
+    #details-panel .read-more:after {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+    #details-panel .quickfacts .icon:before {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        margin-right: calc(30px + .5em)
+    }
+    #details-panel .quickfacts .asteroid:before,
+    #details-panel .quickfacts .dwarf-planet:before,
+    #details-panel .quickfacts .earth:before,
+    #details-panel .quickfacts .inner-solar-system:before,
+    #details-panel .quickfacts .jupiter:before,
+    #details-panel .quickfacts .mars:before,
+    #details-panel .quickfacts .mercury:before,
+    #details-panel .quickfacts .moon:before,
+    #details-panel .quickfacts .netpune:before,
+    #details-panel .quickfacts .outer-solar-system:before,
+    #details-panel .quickfacts .pluto:before,
+    #details-panel .quickfacts .saturn:before,
+    #details-panel .quickfacts .solar-system:before,
+    #details-panel .quickfacts .sun:before,
+    #details-panel .quickfacts .universe:before,
+    #details-panel .quickfacts .uranus:before,
+    #details-panel .quickfacts .venus:before {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        margin-right: calc(20px + .5em)
+    }
+    #details-panel .details-close {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform-origin: right top
+    }
+}
+
+#navigation-bar button {
+    margin: 0;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .8em;
+    padding: 0;
+    text-transform: uppercase
+}
+
+#navigation-bar button.left {
+    margin-right: 1.5em
+}
+
+#navigation-bar button:before {
+    content: "";
+    background: transparent url(3dc997c78ca826192fcd6869f316376d.svg) no-repeat;
+    background-position-x: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .4em;
+    transform: scale(.85);
+    -webkit-transform: scale(.85);
+    transform-origin: center center
+}
+
+#navigation-bar button.outer-solar-system.object:before,
+#navigation-bar button.outer-solar-system.system:before {
+    background-position-y: 0;
+    background-position-x: 0
+}
+
+#navigation-bar button.inner-solar-system.object:before,
+#navigation-bar button.inner-solar-system.system:before {
+    background-position-y: 0;
+    background-position-x: -40px
+}
+
+#navigation-bar button.object:before {
+    background-position-x: 0
+}
+
+#navigation-bar button.system:before {
+    background-position-x: -40px
+}
+
+#navigation-bar button.asteroid.system:before,
+#navigation-bar button.comet.system:before,
+#navigation-bar button.spacecraft.system:before {
+    background-position-y: -600px
+}
+
+#navigation-bar button.dwarf-planet.system:before {
+    background-position-y: -560px
+}
+
+#navigation-bar button.earth:before {
+    background-position-y: -40px
+}
+
+#navigation-bar button.mars:before {
+    background-position-y: -80px
+}
+
+#navigation-bar button.moon:before {
+    background-position-y: -120px
+}
+
+#navigation-bar button.jupiter:before {
+    background-position-y: -160px
+}
+
+#navigation-bar button.saturn:before {
+    background-position-y: -200px
+}
+
+#navigation-bar button.mercury:before {
+    background-position-y: -240px
+}
+
+#navigation-bar button.neptune:before {
+    background-position-y: -280px
+}
+
+#navigation-bar button.uranus:before {
+    background-position-y: -320px
+}
+
+#navigation-bar button.venus:before {
+    background-position-y: -360px
+}
+
+#navigation-bar button.pluto:before {
+    background-position-y: -440px
+}
+
+#navigation-bar button.sun:before {
+    background-position-y: -480px
+}
+
+#navigation-bar button.comet:before {
+    background-position-y: -560px
+}
+
+#navigation-bar button.spacecraft:before {
+    background-position-y: -600px
+}
+
+#navigation-bar button.dwarf-planet:before {
+    background-position-y: -640px
+}
+
+#navigation-bar button.asteroid:before {
+    background-position-y: -680px
+}
+
+@media only screen and (max-width:64em) {
+    #navigation-bar {
+        display: inline-block;
+        vertical-align: middle;
+        bottom: 0
+    }
+    #navigation-bar button {
+        padding: 0 5px
+    }
+    #navigation-bar button.left {
+        margin: 0
+    }
+    #navigation-bar button span {
+        display: none
+    }
+    #navigation-bar button:before {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        margin: 5px
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #navigation-bar {
+        bottom: 0
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #navigation-bar button:before {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        margin-right: .75em
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #navigation-bar button:before {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        margin-right: .75em
+    }
+}
+
+#controls-bar button {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#controls-bar button.hidden {
+    display: none
+}
+
+#controls-bar .hd-toggle,
+#controls-bar .light-toggle,
+#controls-bar .toggle-fullscreen,
+#controls-bar .toggle-unit {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -280px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 5px .2em
+}
+
+#controls-bar .light-toggle.on {
+    background-position-y: -320px
+}
+
+#controls-bar .toggle-fullscreen {
+    background-position-y: -480px;
+    margin-right: 5px
+}
+
+#controls-bar .toggle-fullscreen.active {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -520px
+}
+
+#controls-bar .toggle-unit {
+    background-position-y: -640px
+}
+
+#controls-bar .toggle-unit.metric {
+    background-position-y: -560px
+}
+
+#controls-bar .hd-toggle {
+    background-position-y: -680px
+}
+
+#controls-bar .hd-toggle.active {
+    background-position-y: -720px
+}
+
+@keyframes pulse {
+    0% {
+        opacity: .75;
+        transform: scale(1)
+    }
+    30% {
+        opacity: .1;
+        transform: scale(0)
+    }
+    70% {
+        opacity: .1;
+        transform: scale(0)
+    }
+    to {
+        opacity: .75;
+        transform: scale(1)
+    }
+}
+
+.load-icon {
+    position: fixed;
+    display: block;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(-50%, -50%)
+}
+
+.load-icon.hidden {
+    display: none
+}
+
+.load-icon .text {
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--fg2);
+    font-family: var(--font2);
+    font-size: 1em;
+    text-transform: uppercase
+}
+
+.load-icon .bg,
+.load-icon .bottom,
+.load-icon .front,
+.load-icon .left,
+.load-icon .right,
+.load-icon .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNy4zNTUgMjQuMzU0Yy03LjIxMyA3LjMxMS05LjE4NSAyMy42NzYgMi43MyAzMy43MDcgMi40ODMgMS41NzYgNC44NDUgMS41NzMgNi42MDYgMS4zMjgtMi42Mi03Ljc1NC0xLjkwNi0xNy40MTQuMTM4LTI0LjUtMy4wNTEtMi45NTItNi43Ny02LjE1Ny05LjM3NC0xMC40OTV6TTIyLjQ5NSA5OS4xNzRjMS41NDkgMy4yNjEgNi44NDMgOC4wMjQgOS40MSAxMC41OTggNy41NTYtMi43MzYgMTYuNTQ2LTQuNjEgMjUuMzkxLTMuODU4IDAgMCAxLjEzOC01Ljg5OC0yLjQ1OC05LjQ5NS0xMS4yMDMtNy43NC0yNC4zNjEtNS44Ni0zMi4zNDMgMi43NTV6TTYyLjQwNiAxOTEuMDA1czEuMTQ3LTUuNjEzLTIuNTQzLTkuNThjMTMuOTQ2IDEyLjI5MyA3LjggMjkuMTIxIDIuNzEzIDM0LjE2NSA3LjA1Ni0xMC41NDcgMi4yNTUtMjAuODItLjE3LTI0LjU4NXpNMjUuNDA1IDMwMy4yNDVjMy40NzcgMi4wNjggNi40NzQgMS4xOTkgNi40NzQgMS4xOTkgNi43OCAyLjc4MiAxNi44ODggNC40MTMgMjUuNTk4LTMuODY3LTguMTIzIDguNDIzLTIxLjEwMSAxMS0zMi4wNzIgMi42Njh6TTMxLjg2OCAzNTQuODU4YzExLjIxLTMuODY3IDE3LjcxMy00LjIwNSAyNS4zODYtMy45MTQgNi4zNTggOS4wMDggMy43NzMgMjAuMzI1LjIxMiAyNC41MjItOS40MDUgOC42Mi0xOS42NDMgNi40ODktMjUuNzI4IDMuOTM1LTIuNzcyLTcuMTkyLTIuMTA0LTE2Ljk2Ny4xMS0yNC41MDR6IiBmaWxsPSIjZmZmIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTYyLjQwNiA0MzEuMDIyczEuMTQ3LTUuNjEzLTIuNTQzLTkuNThjMTMuOTQ2IDEyLjI5MyA3LjggMjkuMTIxIDIuNzEzIDM0LjE2NSA3LjA1Ni0xMC41NDYgMi4yNTUtMjAuODItLjE3LTI0LjU4NXpNMTcuMzU1IDQyNC4zN2MtNy4yMTMgNy4zMS05LjE4NSAyMy42NzYgMi43MyAzMy43MDcgMi40ODMgMS41NzYgNC44NDUgMS41NzMgNi42MDYgMS4zMjgtMi42Mi03Ljc1NC0xLjkwNi0xNy40MTQuMTM4LTI0LjUwMS0zLjA1MS0yLjk1MS02Ljc3LTYuMTU2LTkuMzc0LTEwLjQ5NHpNMjIuNDk1IDQxOS4xOTJjMS41NDkgMy4yNiA2Ljg0MyA4LjAyNCA5LjQxIDEwLjU5OCA3LjU1Ni0yLjczNiAxNi41NDYtNC42MSAyNS4zOTEtMy44NTggMCAwIDEuMTM4LTUuODk4LTIuNDU4LTkuNDk1LTExLjIwMy03Ljc0LTI0LjM2MS01Ljg2LTMyLjM0MyAyLjc1NXpNMjUuNDA1IDQ2My4yNjFjMy40NzcgMi4wNjggNi40NzQgMS4yIDYuNDc0IDEuMiA2Ljc4IDIuNzgxIDE2Ljg4OCA0LjQxMyAyNS41OTgtMy44NjctOC4xMjMgOC40MjItMjEuMTAxIDExLTMyLjA3MiAyLjY2N3oiLz48cGF0aCBkPSJNMzEuODY4IDQzNC44NzdjMTEuMjEtMy44NjYgMTcuNzEzLTQuMjA1IDI1LjM4Ni0zLjkxNCA2LjM1OCA5LjAwOCAzLjc3MyAyMC4zMjYuMjEyIDI0LjUyMi05LjQwNSA4LjYyLTE5LjY0MyA2LjQ5LTI1LjcyOCAzLjkzNS0yLjc3Mi03LjE5Mi0yLjEwNC0xNi45NjYuMTEtMjQuNTAzeiIvPjwvZz48L3N2Zz4=) no-repeat 0 -400px;
+    width: 80px;
+    height: 80px;
+    display: block
+}
+
+.load-icon .bg {
+    opacity: .15
+}
+
+.load-icon .bottom,
+.load-icon .front,
+.load-icon .left,
+.load-icon .right,
+.load-icon .top {
+    animation: pulse 2s infinite
+}
+
+.load-icon .front {
+    background-position-y: -320px;
+    transform-origin: 47px 48px
+}
+
+.load-icon .left {
+    background-position-y: 0;
+    transform-origin: 17px 44px;
+    animation-delay: .25s
+}
+
+.load-icon .top {
+    background-position-y: -80px;
+    transform-origin: 41px 18px;
+    animation-delay: .5s
+}
+
+.load-icon .right {
+    background-position-y: -160px;
+    transform-origin: 67px 39.5px;
+    animation-delay: .75s
+}
+
+.load-icon .bottom {
+    background-position-y: -240px;
+    transform-origin: 40px 67px;
+    animation-delay: 1s
+}
+
+@media only screen and (max-width:64em) {
+    #controls-bar button {
+        transform: scale(.75);
+        -webkit-transform: scale(.75);
+        transform-origin: right
+    }
+    #controls-bar .hd-toggle,
+    #controls-bar .light-toggle,
+    #controls-bar .toggle-unit {
+        margin-right: -5px;
+        margin-left: 0
+    }
+    #controls-bar .toggle-fullscreen {
+        margin-right: 0;
+        margin-left: 0
+    }
+    #controls-bar button.last {
+        margin-right: 5px
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #controls-bar .hd-toggle,
+    #controls-bar .light-toggle,
+    #controls-bar .toggle-unit {
+        margin-right: 10px
+    }
+    #controls-bar .hd-toggle,
+    #controls-bar .light-toggle,
+    #controls-bar .toggle-fullscreen,
+    #controls-bar .toggle-unit {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #controls-bar .hd-toggle,
+    #controls-bar .light-toggle,
+    #controls-bar .toggle-unit {
+        margin-right: 20px
+    }
+    #controls-bar .hd-toggle,
+    #controls-bar .light-toggle,
+    #controls-bar .toggle-fullscreen,
+    #controls-bar .toggle-unit {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+}
+
+#clock {
+    font-family: var(--font2);
+    font-size: 1.8em
+}
+
+#clock * {
+    pointer-events: none
+}
+
+#clock .clock-container {
+    pointer-events: all
+}
+
+#clock p {
+    padding: 0;
+    margin: 0
+}
+
+#clock .date {
+    font-size: .55em;
+    margin: 0;
+    opacity: .75
+}
+
+#clock .time {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .2px
+}
+
+#clock .meridiem,
+#clock .time {
+    display: inline-block;
+    vertical-align: middle
+}
+
+#clock .meridiem {
+    font-size: .45em;
+    margin-left: .5em;
+    line-height: 1.25em
+}
+
+#clock .meridiem .off {
+    opacity: .5
+}
+
+@media only screen and (max-width:64em) {
+    #time-scrubber {
+        margin: 0;
+        width: 100%;
+        left: 0;
+        transform: none;
+        -webkit-transform: none
+    }
+    #time-scrubber .time-container {
+        margin: 0 auto
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #clock {
+        top: 5px;
+        margin: 0
+    }
+    #clock .time-components {
+        display: inline-block
+    }
+    #clock .date-components {
+        display: inline-block;
+        margin-right: 25px
+    }
+    #time-scrubber {
+        top: 45px
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #clock .date:before,
+    #clock .time:before {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        margin-right: .2em
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #clock .date:before,
+    #clock .time:before {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        margin-right: .25em
+    }
+}
+
+#message-bar {
+    background: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .25) 15%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .25) 85%, transparent);
+    font-family: var(--font2);
+    font-size: 1.2em;
+    font-weight: 400;
+    pointer-events: none
+}
+
+#message-bar .container {
+    padding-bottom: .25em
+}
+
+#message-bar.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn
+}
+
+#message-bar.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeOut
+}
+
+#message-bar p span {
+    vertical-align: middle
+}
+
+#message-bar p:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+    margin-right: 5px
+}
+
+#message-bar p em {
+    font-style: normal;
+    padding-left: 5px
+}
+
+#message-bar p.asteroid:before,
+#message-bar p.comet:before,
+#message-bar p.dwarf-planet:before,
+#message-bar p.gas-giant:before,
+#message-bar p.ice-giant:before,
+#message-bar p.moon:before,
+#message-bar p.pluto:before,
+#message-bar p.spacecraft:before,
+#message-bar p.star:before,
+#message-bar p.terrestrial-planet:before {
+    background: transparent url(0a8401113e19869c3a5da3fa5cbe99f1.svg) no-repeat 0 0
+}
+
+#message-bar p.spacecraft:before {
+    background-position-y: -120px
+}
+
+#message-bar p.comet:before {
+    background-position-y: -150px
+}
+
+#message-bar p.moon:before {
+    background-position-y: -180px
+}
+
+#message-bar p.dwarf-planet:before,
+#message-bar p.pluto:before {
+    background-position-y: -210px
+}
+
+#message-bar p.earth:before,
+#message-bar p.inner-solar-system:before,
+#message-bar p.jupiter:before,
+#message-bar p.mars:before,
+#message-bar p.mercury:before,
+#message-bar p.neptune:before,
+#message-bar p.outer-solar-system:before,
+#message-bar p.saturn:before,
+#message-bar p.sun:before,
+#message-bar p.uranus:before,
+#message-bar p.venus:before {
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAwLjI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjU1NyAxNC45MTdhMTAuNDQgMTAuNDQgMCAxIDEgMCAuMDU4em0xLjc0IDBhOC43IDguNyAwIDEgMCAwLS4wNTh6bTYuMzggMGEyLjMyIDIuMzIgMCAxIDAgMC0uMDU4eiIgZmlsbD0iI2ZmZiIvPjxnIHRyYW5zZm9ybT0ibWF0cml4KC41Nzg0MyAwIDAgLjU3ODQzIC0yMDEuMjQ2IC0yNDYuNjMxKSIgc3Ryb2tlPSIjZmZmIiBmaWxsPSJub25lIj48Y2lyY2xlIHRyYW5zZm9ybT0ibWF0cml4KC45NiAwIDAgLjk2IDI3Ny4zNiA0NjYuOTUpIiBjeD0iMTAwLjUiIGN5PSIzNi41IiByPSIxMS41IiBjb2xvcj0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzLjEyNSIvPjxwYXRoIGQ9Ik0zODMuMjEgNDgyLjQyNmE5LjMyMyA5LjMyMyAwIDAgMS05LjI4NSA4LjQyOSA5LjMyMyA5LjMyMyAwIDAgMS05LjI3Ni04LjQzOCIgY29sb3I9IiMwMDAiIHN0cm9rZS13aWR0aD0iMi45OTk2NjQiLz48cGF0aCBkPSJNMzczLjg0IDUxMi45OXYxMk0zNjguODQgNTE5Ljk5aDEwIiBzdHJva2Utd2lkdGg9IjMiLz48L2c+PHBhdGggZD0iTTE4LjczIDgyLjk3NmgtNy41MjRtMy43NjIgMy45NnYtOS4wM2E3LjI0NyA3LjI0NyAwIDEgMSAuMDQgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxLjk4MTM4NTQiIHN0cm9rZT0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNC41NjMgOTUuNzg4YTkuMTU4IDkuMTU4IDAgMSAwIC44MzMgMHptLjQxNiAwdjE4LjMxNm05LjE1OC05LjE1OEg1LjgyMSIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxLjY2MzkxMDIiIHN0cm9rZT0iI2ZmZiIvPjxwYXRoIGQ9Ik0xNy4zMTMgMTMxLjQyYTcuMjU0IDcuMjU0IDAgMSAwIDEuMTg5IDEuMTg4emwuNTk0LjU5NCA2LjU0LTYuNTRtLTUuMzUgMGg1LjM1djUuMzUiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iMS45NjE1NDMyIiBzdHJva2U9IiNmZmYiLz48ZyBzdHJva2U9IiNmZmYiIGNvbG9yPSIjMDAwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiPjxwYXRoIGQ9Ik0yMC4zNiAxNTQuNzEydjIwLjg5Nk0yMy43NzUgMTcwLjI1SDcuMTI1TTguODU1IDE2Mi4yMWMtLjU3NCAwLTEuNzIyLS41MzYtMS43MjItMi42OHMyLjI5Ny00LjI4NiA0LjU5My00LjI4NmMyLjI5NyAwIDQuNTkzIDEuNjA4IDQuNTkzIDUuMzU4cy0yLjg3IDkuNjQ1LTguNjEyIDkuNjQ1IiBzdHJva2Utd2lkdGg9IjEuODk2NTEwMDAwMDAwMDAwMSIvPjwvZz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyI+PHBhdGggZD0iTTExLjczMiAxODQuMTI4djE2LjI5OCIgc3Ryb2tlLXdpZHRoPSIxLjY4NjA2Ii8+PHBhdGggZD0iTTguOTc5IDE4Ni43OTdoNi43NDQiIGNvbG9yPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNjg2MDYiLz48cGF0aCBkPSJNMTkuNiAyMDMuNzk4Yy0uNTYxLjU2Mi0xLjEyMyAxLjEyNC0xLjY4NSAxLjEyNHMtMS42ODYtLjU2Mi0xLjY4Ni0xLjY4Ni41NjItMi4yNDggMS42ODYtMy4zNzIgMi4yNDgtMy4zNzIgMi4yNDgtNS42Mi0xLjEyNC00LjQ5Ni0zLjM3Mi00LjQ5NmMtMi4xMjcgMC0zLjkzNCAxLjEyNC01LjA1OSAzLjM3MiIgc3Ryb2tlLXdpZHRoPSIxLjY4NjA2Ii8+PC9nPjxnIHRyYW5zZm9ybT0ibWF0cml4KC42MjA5IDAgMCAuNjIwOSAtMTQxMS4zODIgNjcuNjcpIiBzdHJva2U9IiNmZmYiIGNvbG9yPSIjMDAwIj48cGF0aCBkPSJNMjI5Ny4yIDIzNS45djEzLjEzNU0yMjkyLjEgMjQxLjQzbDQuOTQ0LTUuMDU1IDUuMDU1IDQuOTQ0IiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiLz48ZWxsaXBzZSBjeD0iMjI5Ny40IiBjeT0iMjYwLjA4IiByeD0iMTAuNzgzIiByeT0iMTAuNzkxIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiLz48ZWxsaXBzZSBjeD0iMjI5Ny40IiBjeT0iMjYwLjA5IiByeD0iMi43IiByeT0iMi43IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZmYiIHN0cm9rZT0ibm9uZSIvPjwvZz48ZyBjb2xvcj0iIzAwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2U9IiNmZmYiPjxwYXRoIGQ9Ik04LjY4NiAyNDUuNTFjLTEuNTc4IDEwLjcyNiAxLjA1MyAxMi4zMzYgNi4zMTYgMTIuMzM2czcuODk0LTEuNjEgNi4zMTUtMTIuMzM3TTE0Ljk5NyAyNDYuNTh2MTkuODQ1TTEwLjc5MiAyNjIuMTM0aDguNDIiIHN0cm9rZS13aWR0aD0iMS43ODQ0MyIvPjxwYXRoIGQ9Ik01Ljc3MiAyNDYuOTlsMi45ODYtMi4yNjMgMi4yMiAzLjA0NE0xMi4zMiAyNDkuNTQ4bDIuNjAzLTIuNzExIDIuNjYgMi42NTJNMTguOTgzIDI0Ny45NTRsMi4yNTgtMy4wMTQgMi45NTggMi4zMDEiIHN0cm9rZS13aWR0aD0iMS43ODQ0MyIvPjwvZz48cGF0aCBkPSJNMjEuOTkgMjc0LjY1MmExMC43ODUgMTAuNzg1IDAgMSAwIDAgMjAuNTg5IDEwLjc4NSAxMC43ODUgMCAwIDEgMC0yMC41OXoiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS40NzExNTc0IiBzdHJva2U9IiNmZmYiLz48L3N2Zz4=) no-repeat 0 0
+}
+
+#message-bar p.mercury:before {
+    background-position-y: -30px
+}
+
+#message-bar p.venus:before {
+    background-position-y: -60px
+}
+
+#message-bar p.earth:before {
+    background-position-y: -90px
+}
+
+#message-bar p.mars:before {
+    background-position-y: -120px
+}
+
+#message-bar p.jupiter:before {
+    background-position-y: -150px
+}
+
+#message-bar p.saturn:before {
+    background-position-y: -180px
+}
+
+#message-bar p.uranus:before {
+    background-position-y: -210px
+}
+
+#message-bar p.neptune:before {
+    background-position-y: -240px
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #message-bar {
+        top: 55px
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #message-bar p:before {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #message-bar p:before {
+        transform: scale(1.75);
+        -webkit-transform: scale(1.75)
+    }
+}
+
+#options .toggle-info {
+    margin-right: .25em
+}
+
+#options .close-app,
+#options .toggle-info {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -480px;
+    width: 40px;
+    height: 40px;
+    padding: 0
+}
+
+#options .close-app {
+    background-position-y: -360px
+}
+
+#options .toggle-info {
+    background-position-y: -200px
+}
+
+#options #info-panel .content {
+    position: relative;
+    padding: 4% 0;
+    width: 40%;
+    margin: 0 auto
+}
+
+#options #info-panel h1 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .75);
+    font-size: 3em;
+    font-weight: 700
+}
+
+#options #info-panel .subtitle {
+    color: var(--fg1);
+    font-size: 2em;
+    font-family: var(--font2);
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+    text-align: left
+}
+
+#options #info-panel h2 {
+    color: var(--fg4);
+    font-size: 1em
+}
+
+#options #info-panel h2,
+#options #info-panel li {
+    text-align: left
+}
+
+#options #info-panel ul {
+    margin: 5px 0
+}
+
+#options #info-panel li {
+    margin: 5px 0;
+    list-style-type: square
+}
+
+#options #info-panel p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em
+}
+
+#options #info-panel a {
+    text-decoration: none
+}
+
+#options #info-panel .close-info {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -360px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    pointer-events: all;
+    position: absolute;
+    top: calc(4% + 20px);
+    right: 0
+}
+
+#options #info-panel.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn
+}
+
+#options #info-panel.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeOut
+}
+
+#options #info-panel.hidden a {
+    pointer-events: none
+}
+
+@media only screen and (max-width:64em) {
+    #options #info-panel h1 {
+        font-size: 2.5em
+    }
+    #options #info-panel .content {
+        padding: 40px;
+        width: 100%
+    }
+    #options #info-panel .close-info {
+        top: 1vw;
+        right: 1vw
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #options .close-app,
+    #options .toggle-fullscreen,
+    #options .toggle-info {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+    #options .toggle-info {
+        margin-right: 1.5em
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #options #info-panel .close-info {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #options .toggle-info {
+        margin-right: 2em
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #options #info-panel .close-info,
+    #options .close-app,
+    #options .toggle-fullscreen,
+    #options .toggle-info {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+}
+
+#left-viewport.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn
+}
+
+#left-viewport.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: blackFadeOut;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: blackFadeOut;
+    pointer-events: none
+}
+
+#right-viewport.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn
+}
+
+#right-viewport.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: blackFadeOut;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: blackFadeOut;
+    pointer-events: none
+}
+
+.compare-panel.active {
+    animation-duration: .25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .25s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeIn
+}
+
+.compare-panel.hidden {
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-name: fadeOut;
+    pointer-events: none
+}
+
+.compare-panel {
+    pointer-events: none
+}
+
+#comparison #left-container {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 50px
+}
+
+#comparison #right-container {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 50px
+}
+
+#comparison .left-arrow,
+#comparison .right-arrow {
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat -60px 0;
+    position: fixed;
+    color: var(--fg3);
+    pointer-events: auto;
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin-bottom: -30px
+}
+
+#comparison .left-arrow {
+    left: 50%;
+    bottom: 50%
+}
+
+#comparison .right-arrow {
+    background-position-y: -60px;
+    right: 0;
+    bottom: 50%
+}
+
+#comparison .title {
+    font-size: 2em;
+    line-height: 1.2em;
+    font-family: var(--font2);
+    font-weight: 300
+}
+
+.comparetable {
+    margin-top: 1em
+}
+
+.comparetable .cell {
+    white-space: nowrap
+}
+
+.comparetable .left {
+    border-right: 1px solid var(--separator);
+    text-align: left
+}
+
+.comparetable .right {
+    color: var(--fg3);
+    font-family: var(--font1);
+    font-size: .9em;
+    text-align: left
+}
+
+.comparetable .top .cell {
+    width: 90%;
+    margin: auto;
+    padding-bottom: .5em
+}
+
+.comparetable .top .left .cell {
+    padding-right: 30px
+}
+
+.comparetable .bottom .cell {
+    color: var(--fg3);
+    font-family: var(--font1);
+    font-size: .7em;
+    border-top: 1px solid var(--separator);
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    padding-top: .5em
+}
+
+.comparetable td {
+    padding: 0 .5em
+}
+
+.comparetable .radius {
+    font-size: 1.5em;
+    font-family: var(--font1)
+}
+
+.comparetable .unit {
+    vertical-align: top
+}
+
+.comparetable .type,
+.comparetable .unit {
+    font-size: .75em;
+    font-family: var(--font1)
+}
+
+.comparetable .type {
+    vertical-align: middle
+}
+
+.comparetable .type:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(0a8401113e19869c3a5da3fa5cbe99f1.svg) no-repeat;
+    background-position-x: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: .5em
+}
+
+.comparetable .type.asteroid:before {
+    background-position-y: 0
+}
+
+.comparetable .type.star:before {
+    background-position-y: -30px
+}
+
+.comparetable .type.gas-giant:before {
+    background-position-y: -60px
+}
+
+.comparetable .type.ice-giant:before {
+    background-position-y: -240px
+}
+
+.comparetable .type.terrestrial-planet:before {
+    background-position-y: -90px
+}
+
+.comparetable .type.spacecraft:before {
+    background-position-y: -120px
+}
+
+.comparetable .type.spacecraft.orbiter:before {
+    background-position-y: -270px
+}
+
+.comparetable .type.spacecraft.flyby:before {
+    background-position-y: -300px
+}
+
+.comparetable .type.spacecraft.lander:before {
+    background-position-y: -330px
+}
+
+.comparetable .type.spacecraft.rover:before {
+    background-position-y: -360px
+}
+
+.comparetable .type.comet:before {
+    background-position-y: -150px
+}
+
+.comparetable .type.moon:before {
+    background-position-y: -180px
+}
+
+.comparetable .type.dwarf-planet:before {
+    background-position-y: -210px
+}
+
+#comparedata-left-radius,
+#comparedata-right-radius {
+    font-size: 1.5em;
+    font-family: var(--font1);
+    color: orange
+}
+
+#comparedata-left-units,
+#comparedata-right-units {
+    font-size: .75em;
+    font-family: var(--font1);
+    vertical-align: top
+}
+
+.close-compare-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: .5em;
+    background-color: var(--bgbanner);
+    z-index: 200;
+    display: none
+}
+
+.close-compare {
+    pointer-events: auto;
+    background-color: transparent;
+    font-family: var(--font2);
+    font-weight: 300;
+    color: var(--fg1);
+    font-size: 1.4em
+}
+
+.close-compare:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(0124a793055feb08032ad84a9da88348.svg) no-repeat 0 -360px;
+    margin-bottom: .2em;
+    margin-right: .25em
+}
+
+@media only screen and (max-width:64em) {
+    #comparison .title {
+        font-size: 1.25em
+    }
+    #comparison #left-container {
+        width: 100%;
+        bottom: calc(50% - 20px);
+        position: fixed
+    }
+    #comparison #right-container {
+        width: 100%;
+        bottom: 0;
+        position: fixed
+    }
+    #comparison .left-arrow,
+    #comparison .right-arrow {
+        bottom: calc(25% + 37.5px)
+    }
+    #comparison .left-arrow {
+        left: 0
+    }
+    .comparetable {
+        width: 100%
+    }
+    .comparetable .bottom {
+        display: none
+    }
+    .comparetable .left,
+    .comparetable .right {
+        width: 50%
+    }
+    .comparetable .cell {
+        text-align: center
+    }
+    .comparetable .top .cell {
+        padding-bottom: 0
+    }
+    .comparetable .cell span {
+        display: inline-block;
+        vertical-align: middle
+    }
+    .close-compare-container {
+        padding: 0
+    }
+    .close-compare {
+        font-size: 1em
+    }
+    .close-compare:before {
+        transform: scale(.6);
+        -webkit-transform: scale(.6)
+    }
+}
+
+@media only screen and (orientation:landscape) and (max-height:32em) {
+    #comparison #left-container,
+    #comparison #right-container {
+        width: 50%;
+        bottom: 0
+    }
+    #comparison .title {
+        font-size: 1.25em
+    }
+    #comparison .left-arrow,
+    #comparison .right-arrow {
+        bottom: 50%
+    }
+    #comparison .left-arrow {
+        left: 50%
+    }
+    .close-compare {
+        font-size: 1.25em
+    }
+    .close-compare:before {
+        transform: scale(.6);
+        -webkit-transform: scale(.6)
+    }
+}
+
+@media only screen and (min-width:180em) and (min-height:64em) {
+    #comparison .left-arrow,
+    #comparison .right-arrow {
+        transform-origin: center left;
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+    #comparison .right-arrow {
+        transform-origin: center right
+    }
+    .close-compare:before,
+    .comparetable .type:before {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25)
+    }
+}
+
+@media only screen and (min-width:200em) and (min-height:90em) {
+    #comparison .left-arrow,
+    #comparison .right-arrow,
+    .close-compare:before,
+    .comparetable .type:before {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5)
+    }
+}

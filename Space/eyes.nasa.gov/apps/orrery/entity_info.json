@@ -1,0 +1,714 @@
+{
+	"sun": {
+		"id": "sun",
+		"name": "Sun",
+		"adjective": "Solarian",
+		"category": "Star",
+		"subcategory": "Yellow Dwarf Star",
+		"keywords": ["star", "solar system"],
+		"weight": 150
+	},
+	"mercury": {
+		"id": "mercury",
+		"name": "Mercury",
+		"adjective": "Mercurian",
+		"category": "Terrestrial Planet",
+		"keywords": ["terrestrial planet", "solar system", "planets"],
+		"weight": 100
+	},
+	"venus": {
+		"id": "venus",
+		"name": "Venus",
+		"adjective": "Venusian",
+		"category": "Terrestrial Planet",
+		"keywords": ["terrestrial planet", "solar system", "planets"],
+		"weight": 100
+	},
+	"earth": {
+		"id": "earth",
+		"name": "Earth",
+		"adjective": "Terran",
+		"category": "Terrestrial Planet",
+		"keywords": ["terrestrial planet", "solar system", "planets"],
+		"weight": 100
+	},
+	"mars": {
+		"id": "mars",
+		"name": "Mars",
+		"adjective": "Martian",
+		"category": "Terrestrial Planet",
+		"keywords": ["terrestrial planet", "solar system", "planets"],
+		"weight": 100
+	},
+	"jupiter": {
+		"id": "jupiter",
+		"name": "Jupiter",
+		"adjective": "Jovian",
+		"category": "Gas Giant",
+		"keywords": ["gas giant", "solar system", "planets"],
+		"weight": 100
+	},
+	"saturn": {
+		"id": "saturn",
+		"name": "Saturn",
+		"adjective": "Saturnian",
+		"category": "Gas Giant",
+		"keywords": ["gas giant", "solar system", "planets"],
+		"weight": 100
+	},
+	"neptune": {
+		"id": "neptune",
+		"name": "Neptune",
+		"adjective": "Neptunian",
+		"category": "Ice Giant",
+		"keywords": ["ice giant", "solar system", "planets"],
+		"weight": 100
+	},
+	"uranus": {
+		"id": "uranus",
+		"name": "Uranus",
+		"adjective": "Uranian",
+		"category": "Ice Giant",
+		"keywords": ["gas giant", "solar system", "planets", "1781"],
+		"weight": 100
+	},
+	"134340_pluto": {
+		"id": "134340_pluto",
+		"name": "Pluto",
+		"adjective": "Plutonian",
+		"category": "Dwarf Planet",
+		"keywords": ["dwarf planet", "solar system", "dwarf planet", "trans-neptunian object", "plutoid", "kuiper belt object", "plutino", "synchronous", "1930"],
+		"weight": 55
+	},
+	"ariel": {
+		"id": "ariel",
+		"name": "Ariel",
+		"adjective": "Arielian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "uranus", "moons", "prograde", "synchronous", "1851"],
+		"weight": 17
+	},
+	"486958_arrokoth": {
+		"id": "486958_arrokoth",
+		"name": "Arrokoth",
+		"adjective": "",
+		"category": "Asteroid",
+		"subcategory": "Kuiper Belt Object",
+		"keywords": ["mu69", "asteroid", "asteroids", "tno", "cubewano", "distant minor planet", "pt1", "1110113y", "ultima thule", "2014", "kuiper belt object"],
+		"weight": 12
+	},
+	"101955_bennu": {
+		"id": "101955_bennu",
+		"name": "101955 Bennu",
+		"adjective": "",
+		"category": "Asteroid",
+		"subcategory": "B-Type Asteroid",
+		"keywords": ["asteroid", "asteroids", "apollo", "neo", "pha", "1999 rq36", "1999", "b-type"],
+		"weight": 10
+	},
+	"16_psyche": {
+		"id": "16_psyche",
+		"name": "16 Psyche",
+		"adjective": "",
+		"category": "Asteroid",
+		"subcategory": "M-Type Asteroid",
+		"keywords": ["asteroid", "asteroids", "m-type"],
+		"weight": 10
+	},
+	"1_ceres": {
+		"id": "1_ceres",
+		"name": "Ceres",
+		"adjective": "Cererian",
+		"category": "Dwarf Planet",
+		"keywords": ["dwarf planet", "asteroids", "asteroid belt", "a899 of", "1943 xb", "1801"],
+		"weight": 38
+	},
+	"136199_eris": {
+		"id": "136199_eris",
+		"name": "136199 Eris",
+		"adjective": "Eridian",
+		"category": "Dwarf Planet",
+		"keywords": ["asteroid", "asteroids", "dwarf planet", "tno", "plutoid", "sdo", "binary", "dysnomia", "2005"],
+		"weight": 14
+	},
+	"136108_haumea": {
+		"id": "136108_haumea",
+		"name": "136108 Haumea",
+		"adjective": "Haumean",
+		"category": "Dwarf Planet",
+		"keywords": ["asteroid", "asteroids", "dwarf planet", "plutoid", "tno", "cubewano", "trinary", "2003 el61", "2004"],
+		"weight": 10
+	},
+	"136472_makemake": {
+		"id": "136472_makemake",
+		"name": "136472 Makemake",
+		"adjective": "Makemakean",
+		"category": "Dwarf Planet",
+		"keywords": ["asteroid", "asteroids", "dwarf planet", "cubewano", "scattered-near", "kuiper belt", "2005 fy9", "2005"],
+		"weight": 10
+	},
+	"4_vesta": {
+		"id": "4_vesta",
+		"name": "Vesta",
+		"adjective": "Vestian",
+		"category": "Asteroid",
+		"subcategory": "Protoplanet",
+		"keywords": ["asteroid", "asteroids", "main belt", "vesta family", "1807", "protoplanet"],
+		"weight": 39
+	},
+	"433_eros": {
+		"id": "433_eros",
+		"name": "433 Eros",
+		"adjective": "Erotian",
+		"category": "Asteroid",
+		"subcategory": "S-Type Asteroid",
+		"keywords": ["asteroid", "asteroids", "neo", "1898", "prograde"],
+		"weight": 39
+	},
+	"65803_didymos": {
+		"id": "65803_didymos",
+		"name": "65803 Didymos",
+		"adjective": "",
+		"category": "Asteroid",
+		"subcategory": "Xk-Type Asteroid",
+		"keywords": ["asteroid", "asteroids", "dimorphos"],
+		"weight": 41
+	},
+	"99942_apophis": {
+		"id": "99942_apophis",
+		"name": "99942 Apophis",
+		"adjective": "Apophidian",
+		"category": "Asteroid",
+		"subcategory": "S-Type Asteroid",
+		"keywords": ["asteroid", "asteroids", "neo", "2004"],
+		"weight": 40
+	},
+	"callisto": {
+		"id": "callisto",
+		"name": "Callisto",
+		"adjective": "Callistoan",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "jupiter", "moons", "main group", "galilean moons", "prograde", "synchronous", "1610"],
+		"weight": 32
+	},
+	"charon": {
+		"id": "charon",
+		"name": "Charon",
+		"adjective": "Charonian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "pluto", "moons", "prograde", "synchronous", "1978"],
+		"weight": 22
+	},
+	"67p_churyumov_gerasimenko": {
+		"id": "67p_churyumov_gerasimenko",
+		"name": "67P/Churyumov-Gerasimenko",
+		"adjective": "",
+		"category": "Comet",
+		"subcategory": "Short-Period Comet",
+		"keywords": ["comet", "comets", "jupiter-family", "1969 r1", "1969 iv", "1969h", "1975 p1", "1976 vii", "1975i", "1982 viii", "1982f", "1989 vi", "1988i", "1969", "chury", "short-period"],
+		"weight": 18
+	},
+	"1p_halley": {
+		"id": "1p_halley",
+		"name": "1P/Halley",
+		"adjective": "",
+		"category": "Comet",
+		"subcategory": "Short-Period Comet",
+		"keywords": ["comet", "comets", "short-period", "1p/halley"],
+		"weight": 14
+	},
+	"9p_tempel_1": {
+		"id": "9p_tempel_1",
+		"name": "9P/Tempel 1",
+		"adjective": "",
+		"category": "Comet",
+		"subcategory": "Jupiter-Family Comet",
+		"keywords": ["comet", "comets", "periodic", "jupiter-family", "9p/tempel", "1867"],
+		"weight": 22
+	},
+	"81p_wild_2": {
+		"id": "81p_wild_2",
+		"name": "81P/Wild 2",
+		"adjective": "",
+		"category": "Comet",
+		"subcategory": "Short-Period Comet",
+		"keywords": ["comet", "comets", "81p/wild", "1978 xi", "1984 xiv", "1990 xxviii", "1978"],
+		"weight": 21
+	},
+	"deimos": {
+		"id": "deimos",
+		"name": "Deimos",
+		"adjective": "Deimosian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "mars", "moons", "synchronous", "1877"],
+		"weight": 25
+	},
+	"dimorphos": {
+		"id": "dimorphos",
+		"name": "Dimorphos",
+		"adjective": "",
+		"category": "Asteroid",
+		"subcategory": "Xk-Type Asteroid",
+		"keywords": ["minor moon", "solar system", "65803 Didymos", "asteroid"],
+		"weight": 40
+	},
+	"dione": {
+		"id": "dione",
+		"name": "Dione",
+		"adjective": "Dionean",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "inner moons", "prograde", "synchronous", "1684"],
+		"weight": 65
+	},
+	"enceladus": {
+		"id": "enceladus",
+		"name": "Enceladus",
+		"adjective": "Enceladan",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "inner moons", "prograde", "synchronous", "1789"],
+		"weight": 90
+	},
+	"europa": {
+		"id": "europa",
+		"name": "Europa",
+		"adjective": "Europan",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "jupiter", "moons", "main group", "galilean moons", "prograde", "synchronous", "1610"],
+		"weight": 65
+	},
+	"ganymede": {
+		"id": "ganymede",
+		"name": "Ganymede",
+		"adjective": "Ganymedean",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "jupiter", "moons", "main group", "galilean moons", "prograde", "synchronous", "1610"],
+		"weight": 40
+	},
+	"c_1995_o1": {
+		"id": "c_1995_o1",
+		"name": "Hale-Bopp",
+		"adjective": "",
+		"category": "Comet",
+		"subcategory": "Long-Period Comet",
+		"keywords": ["comet", "solar system", "The Great Comet of 1997", "C/1995 O1", "1995"],
+		"weight": 21
+	},
+	"hyperion": {
+		"id": "hyperion",
+		"name": "Hyperion",
+		"adjective": "Hyperionian",
+		"category": "Moon",
+		"subcategory": "Minor Moon",
+		"keywords": ["minor moon", "solar system", "saturn", "moons", "outer moons", "prograde", "1848"],
+		"weight": 42
+	},
+	"iapetus": {
+		"id": "iapetus",
+		"name": "Iapetus",
+		"adjective": "Iapetian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "outer moons", "prograde", "synchronous", "1671"],
+		"weight": 43
+	},
+	"io": {
+		"id": "io",
+		"name": "Io",
+		"adjective": "Ionian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "jupiter", "moons", "main group", "galilean moons", "prograde", "synchronous", "1610"],
+		"weight": 74
+	},
+	"mimas": {
+		"id": "mimas",
+		"name": "Mimas",
+		"adjective": "Mimantean",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "inner moons", "prograde", "synchronous", "1789", "death star"],
+		"weight": 75
+	},
+	"miranda": {
+		"id": "miranda",
+		"name": "Miranda",
+		"adjective": "Mirandan",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "uranus", "moons", "prograde", "synchronous", "1948"],
+		"weight": 17
+	},
+	"moon": {
+		"id": "moon",
+		"name": "Moon",
+		"adjective": "Lunar",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "earth", "moons", "synchronous"],
+		"weight": 90
+	},
+	"nereid": {
+		"id": "nereid",
+		"name": "Nereid",
+		"adjective": "Nereidian",
+		"category": "Moon",
+		"subcategory": "Minor Moon",
+		"keywords": ["minor moon", "solar system", "neptune", "moons", "irregular moons", "prograde", "1949"],
+		"weight": 12
+	},
+	"oberon": {
+		"id": "oberon",
+		"name": "Oberon",
+		"adjective": "Oberonian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "uranus", "moons", "prograde", "synchronous", "1787"],
+		"weight": 15
+	},
+	"phobos": {
+		"id": "phobos",
+		"name": "Phobos",
+		"adjective": "Phobian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "mars", "moons", "synchronous", "1877"],
+		"weight": 37
+	},
+	"phoebe": {
+		"id": "phoebe",
+		"name": "Phoebe",
+		"adjective": "Phobian",
+		"category": "Moon",
+		"subcategory": "Minor Moon",
+		"keywords": ["minor moon", "solar system", "saturn", "moons", "norse group", "retrograde", "1899"],
+		"weight": 36
+	},
+	"proteus": {
+		"id": "proteus",
+		"name": "Proteus",
+		"adjective": "Protean",
+		"category": "Moon",
+		"subcategory": "Minor Moon",
+		"keywords": ["minor moon", "solar system", "neptune", "moons", "regular moons", "prograde", "synchronous", "1989"],
+		"weight": 10
+	},
+	"rhea": {
+		"id": "rhea",
+		"name": "Rhea",
+		"adjective": "Rhean",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "outer moons", "prograde", "synchronous", "1672"],
+		"weight": 67
+	},
+	"tethys": {
+		"id": "tethys",
+		"name": "Tethys",
+		"adjective": "Tethyan",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "inner moons", "prograde", "synchronous", "1684"],
+		"weight": 75
+	},
+	"titan": {
+		"id": "titan",
+		"name": "Titan",
+		"adjective": "Titanian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "saturn", "moons", "outer moons", "prograde", "synchronous", "1655"],
+		"weight": 90
+	},
+	"titania": {
+		"id": "titania",
+		"name": "Titania",
+		"adjective": "Titanian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "uranus", "moons", "prograde", "synchronous", "1787"],
+		"weight": 15
+	},
+	"triton": {
+		"id": "triton",
+		"name": "Triton",
+		"adjective": "Tritonian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "neptune", "moons", "irregular moons", "retrograde", "synchronous", "1846"],
+		"weight": 21
+	},
+	"umbriel": {
+		"id": "umbriel",
+		"name": "Umbriel",
+		"adjective": "Umbrielian",
+		"category": "Moon",
+		"subcategory": "Major Moon",
+		"keywords": ["major moon", "solar system", "uranus", "moons", "prograde", "synchronous", "1851"],
+		"weight": 14
+	},
+	"sc_chandra": {
+		"id": "sc_chandra",
+		"name": "Chandra X-ray Observatory",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["telescope", "orbiter", "earth", "Columbia", "X-ray", "astrophysics"],
+		"weight": 64
+	},
+	"sc_dart": {
+		"id": "sc_dart",
+		"name": "DART",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Impactor",
+		"keywords": ["spacecraft", "asteroid", "asteroids", "2021", "double asteroid redirection test"],
+		"weight": 80
+	},
+	"sc_hubble_space_telescope": {
+		"id": "sc_hubble_space_telescope",
+		"name": "Hubble Space Telescope",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "orbiter", "telescope", "1990"],
+		"weight": 64
+	},
+	"sc_insight": {
+		"id": "sc_insight",
+		"name": "InSight",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Lander",
+		"keywords": ["spacecraft", "mars", "lander", "seismic", "2018"],
+		"weight": 78,
+		"landingDate": "2018-11-26T19:45"
+	},
+	"sc_iss": {
+		"id": "sc_iss",
+		"name": "International Space Station",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "orbiter", "iss", "1998"],
+		"weight": 91,
+		"customDistance": 0.1
+	},
+	"sc_ixpe": {
+		"id": "sc_ixpe",
+		"name": "IXPE",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "orbiter", "telescope", "2021", "x-ray", "imaging x-ray polarimetry explorer", "cosmic x-rays"],
+		"weight": 65
+	},
+	"sc_juno": {
+		"id": "sc_juno",
+		"name": "Juno",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "jupiter", "orbiter", "gravity", "magnetic field", "atmosphere", "junocam", "bruh", "2011"],
+		"weight": 83,
+		"customDistance": 0.04
+	},
+	"sc_jwst": {
+		"id": "sc_jwst",
+		"name": "James Webb Space Telescope",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["jwst", "spacecraft", "orbiter", "earth", "telescope", "2021", "universe"],
+		"weight": 64
+	},
+	"sc_landsat_9": {
+		"id": "sc_landsat_9",
+		"name": "Landsat 9",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "orbiter", "2021", "landsat", "land", "surface"],
+		"weight": 83
+	},
+	"sc_lucy": {
+		"id": "sc_lucy",
+		"name": "Lucy",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "asteroids", "flyby", "2021"],
+		"weight": 83
+	},
+	"sc_lunar_reconnaissance_orbiter": {
+		"id": "sc_lunar_reconnaissance_orbiter",
+		"name": "Lunar Reconnaissance Orbiter",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "moon", "orbiter", "lro", "temperature", "imaging", "albedo", "polar", "2009"],
+		"weight": 28
+	},
+	"sc_mars_express": {
+		"id": "sc_mars_express",
+		"name": "Mars Express",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "mars", "orbiter", "water", "geology", "atmosphere", "surface", "relay", "2003"],
+		"weight": 27
+	},
+	"sc_mars_odyssey": {
+		"id": "sc_mars_odyssey",
+		"name": "Mars Odyssey",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "mars", "orbiter", "elements", "minerals", "hydrogen", "water", "polar", "radiation", "relay", "2001"],
+		"weight": 90
+	},
+	"sc_mars_reconnaissance_orbiter": {
+		"id": "sc_mars_reconnaissance_orbiter",
+		"name": "Mars Reconnaissance Orbiter",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "mars", "orbiter", "mro", "water", "dust", "atmosphere", "relay", "2005"],
+		"weight": 90
+	},
+	"sc_mars_science_laboratory": {
+		"id": "sc_mars_science_laboratory",
+		"name": "Curiosity",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Rover",
+		"keywords": ["spacecraft", "mars", "lander", "rover", "msl", "curiosity", "microbes", "habitability", "2011", "science", "laboratory"],
+		"weight": 90,
+		"landingDate": "2012-08-06T05:32"
+	},
+	"sc_maven": {
+		"id": "sc_maven",
+		"name": "MAVEN",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "mars", "orbiter", "atmosphere", "ionosphere", "solar wind", "relay", "2013"],
+		"weight": 24
+	},
+	"sc_new_horizons": {
+		"id": "sc_new_horizons",
+		"name": "New Horizons",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "pluto", "mu59", "flyby", "imager", "spectrometer", "ultraviolet", "solar wind", "extended mission", "2006"],
+		"weight": 82
+	},
+	"sc_osiris_rex": {
+		"id": "sc_osiris_rex",
+		"name": "OSIRIS-REx",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "bennu", "lander", "sample return", "asteroids", "chemistry", "mineralogy", "2016"],
+		"weight": 11
+	},
+	"sc_parker_solar_probe": {
+		"id": "sc_parker_solar_probe",
+		"name": "Parker Solar Probe",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "psp"],
+		"weight": 25
+	},
+	"sc_perseverance": {
+		"id": "sc_perseverance",
+		"name": "Perseverance",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Rover",
+		"keywords": ["spacecraft", "mars", "lander", "rover", "perseverance", "2020", "m2020", "mars 2020"],
+		"weight": 90,
+		"landingDate": "2021-02-18T20:43"
+	},
+	"sc_pioneer_10": {
+		"id": "sc_pioneer_10",
+		"name": "Pioneer 10",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "jupiter", "callisto", "ganymede", "europa", "io", "flyby", "outer planets", "interstellar", "1972"],
+		"weight": 17
+	},
+	"sc_pioneer_11": {
+		"id": "sc_pioneer_11",
+		"name": "Pioneer 11",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "jupiter", "callisto", "ganymede", "io", "europa", "amalthea", "saturn", "iapetus", "phoebe", "hyperion", "epimetheus", "atlas", "dione", "mimas", "janus", "tethys", "enceladus", "calypso", "rhea", "titan", "flyby", "magnetic field", "solar wind", "outer planets", "interstellar", "1973"],
+		"weight": 17
+	},
+	"sc_sentinel_6": {
+		"id": "sc_sentinel_6",
+		"name": "Sentinel-6 Michael Freilich",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "orbiter", "2020", "sea level", "jason", "jason-cs", "copernicus", "topex/poseidon"],
+		"weight": 90
+	},
+	"sc_stereo_ahead": {
+		"id": "sc_stereo_ahead",
+		"name": "STEREO Ahead",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "sun", "orbiter", "solar terrestrial relations observatory", "stereoscopic", "coronal mass ejections", "cme", "2006"],
+		"weight": 21
+	},
+	"sc_tess": {
+		"id": "sc_tess",
+		"name": "TESS",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "earth", "telescope", "transiting exoplanet survey satellite", "orbiter", "2018", "exoplanets"],
+		"weight": 18
+	},
+	"sc_trace_gas_orbiter": {
+		"id": "sc_trace_gas_orbiter",
+		"name": "Trace Gas Orbiter",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Orbiter",
+		"keywords": ["spacecraft", "mars", "orbiter", "tgo", "atmosphere", "relay", "2016"],
+		"weight": 18
+	},
+	"sc_voyager_1": {
+		"id": "sc_voyager_1",
+		"name": "Voyager 1",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "jupiter", "saturn", "flyby", "imaging", "radio science", "infrared", "ultraviolet", "magnetometer", "plasma", "1977"],
+		"weight": 81
+	},
+	"sc_voyager_2": {
+		"id": "sc_voyager_2",
+		"name": "Voyager 2",
+		"adjective": "",
+		"category": "Spacecraft",
+		"subcategory": "Flyby",
+		"keywords": ["spacecraft", "jupiter", "saturn", "uranus", "neptune", "flyby", "imaging", "radio science", "infrared", "ultraviolet", "magnetometer", "plasma", "1977"],
+		"weight": 81
+	}
+}
